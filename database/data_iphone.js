@@ -4,7 +4,7 @@ export let iphone_data = [
         brand: 'apple',
         series: 'se',
         model: 'iphone se 2022',
-        memory: [64, 128, 215],
+        memory: [64, 128, 256],
         color: ['midnight', 'starlight', '(product) red'],
         oldPrice: [12990000, 13990000, 16990000],
         actualPrice: [9900000, 11990000, 14990000],
