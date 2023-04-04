@@ -8,6 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-logo a {
@@ -63,4 +64,74 @@
 .top-menu>li {
     position: relative;
     padding: 22px 16px;
+}
+
+.header-wrapper {
+    width: 172px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+}
+
+.header-wrapper a {
+    color: #fff;
+}
+
+.header-wrapper .header-bagshop {
+    position: relative;
+}
+
+.header-wrapper .cal-item {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    border: #515154 solid 1px;
+    text-align: center;
+    background-color: #fff;
+    color: #515154;
+}
+
+.header-user {
+    position: relative;
+    line-height: 60px;
+}
+
+.header-bagshop,
+.header-search,
+.header-user {
+    padding: 0 16px;
+}
+
+.header-user .subnav-user {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000;
+    background-color: rgba(255, 255, 255, 0.906);
+    width: 180px;
+}
+
+.subnav-user a {
+    color: #000;
+}
+
+.subnav-user li:hover {
+    opacity: 0.8;
+}
+
+.header-user:hover .subnav-user li {
+    display: block;
+}
+
+.subnav-user li {
+    display: none;
+    line-height: normal;
+    padding: 10px 40px;
+    margin: 10px 0;
 }
