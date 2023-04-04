@@ -1,5 +1,11 @@
 #header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     background-color: #515154;
+    z-index: 999;
+
 }
 
 .header-container {
@@ -14,7 +20,7 @@
 .header-logo a {
     height: 60px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -42,7 +48,7 @@
 
 .header-menu .subnav {
     position: absolute;
-    background-color: #515154;
+    background-color: rgb(84, 84, 84);
     width: 150px;
     display: none;
 }
@@ -51,11 +57,11 @@
     padding: 10px 10px;
 }
 
-.header-menu li:hover {
+.header-menu .subnav li:hover {
     background-color: #626265;
 }
 
-.header-menu li:hover .subnav {
+.header-menu li:hover>.subnav {
     display: block;
     top: 100%;
     left: 0;
@@ -90,7 +96,7 @@
     height: 18px;
     line-height: 18px;
     border-radius: 50%;
-    border: #515154 solid 1px;
+    border: #515154 solid 0.5px;
     text-align: center;
     background-color: #fff;
     color: #515154;
