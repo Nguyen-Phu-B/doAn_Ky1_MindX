@@ -19,3 +19,7 @@ li {
 a {
     text-decoration: none;
 }
+
+#slide {
+    margin-top: 60px;
+}
