@@ -1,0 +1,11 @@
+#content {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.box-booth .box-header {
+    max-width: 1200px;
+    text-align: center;
+}
