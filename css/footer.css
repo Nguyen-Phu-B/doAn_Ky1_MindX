@@ -52,6 +52,7 @@
     opacity: 0.7;
     line-height: 28px;
     font-size: 13px;
+    text-decoration: none !important;
 }
 
 .ft-list ul>li {
@@ -63,6 +64,6 @@
     font-size: 16px;
 }
 
-.ft-list a:hover {
+.ft-list a:not([id="ft-hot-line"]):hover {
     border-bottom: #fff solid;
 }

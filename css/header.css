@@ -29,9 +29,9 @@
     max-width: 80%;
 }
 
-/* .header-menu {
-    height: 60px;
-} */
+.header-menu {
+    height: 68px;
+}
 
 .header-menu li a {
     color: #fff;
@@ -84,6 +84,11 @@
     color: #fff;
 }
 
+.header-wrapper a:hover {
+    opacity: 0.9;
+    color: #fff;
+}
+
 .header-wrapper .header-bagshop {
     position: relative;
 }
@@ -104,7 +109,7 @@
 
 .header-user {
     position: relative;
-    line-height: 60px;
+    line-height: 68px;
 }
 
 .header-bagshop,
@@ -120,14 +125,15 @@
     border-radius: 5px;
     box-shadow: 2px 2px 4px #000;
     background-color: rgba(255, 255, 255, 0.906);
-    width: 180px;
+    width: 230px;
 }
 
 .subnav-user a {
-    color: #000;
+    color: #000 !important;
+    text-decoration: none !important;
 }
 
-.subnav-user li:hover {
+.subnav-user>li:hover {
     opacity: 0.8;
 }
 
