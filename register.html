@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/content.css">
+    <link rel="stylesheet" href="./CSS/register.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Wapper- form đăng ký Bootstrap  -->
+    <div id="wrapper-form" style="background-image: url('https://i.pinimg.com/564x/17/17/8a/17178a26ad764906f5ea3c8c44df5ac2.jpg');
+            background-attachment: fixed;
+            background-size: 70% 70%">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-center mb-4">Đăng Ký Tài Khoản</h2>
+                                <form action="">
+                                    <div class="fill-form">
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="FullName">Họ Và tên:</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Nhập Họ" />
+                                                <input type="text" class="form-control" placeholder="Nhập Tên" />
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <label for="gender">Giới tính:</label>
+                                            <div class="gender-box">
+                                                <span class="male">
+                                                    <input type="radio" value="M" id="gender-male" name="Gender">
+                                                    <label class="forcheckbox" for="gender-male">Nam</label>
+                                                </span>
+
+                                                <span class="female">
+                                                    <input type="radio" value="F" id="gender-female" name="Gender">
+                                                    <label class="forcheckbox" for="gender-female">Nữ</label>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="Email">E-mail</label>
+                                            <div class="input-group mb-2">
+                                                <input type="email" class="form-control" placeholder="Nhập Email">
+                                                <span class="input-group-text">@example.com</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="PhoneNumber">Điện Thoại</label>
+                                            <input type="text" class="form-control" placeholder="+84" />
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="Username">Username</label>
+                                            <input type="text" class="form-control" placeholder="Nhập tên tài khoản">
+                                        </div>
+                                    </div>
+
+                                    <div class="needs-validated">
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="pwd">Mật khẩu</label>
+                                            <input type="password" class="form-control" id="pwd"
+                                                placeholder="Nhập mật khẩu" name="pswd" required />
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Hãy nhập mật khẩu</div>
+                                        </div>
+
+                                        <label for="Luu-y" class="luu-y text-danger">Lưu ý: Mật khẩu phải có tối
+                                            thiểu 8 ký tự bao gồm chữ, số và các ký tự đặc biệt</label>
+
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="re-pwd">Xác nhận mật khẩu</label>
+                                            <input type="password" class="form-control" id="re-pwd"
+                                                placeholder="Nhập lại mật khẩu" name="re-pswd" required />
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Mật khẩu không trùng khớp</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check d-flex mb-4">
+                                        <input class="form-check-input" type="checkbox" id="myCheck" name="remember"
+                                            required>
+                                        <label class="form-check-label" for="myCheck">
+                                            I agree all statements in <a
+                                                href="https://en.wikipedia.org/wiki/Terms_of_service"
+                                                class="text-body"><u>Terms of service</u></a>
+                                        </label>
+
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <button type="button"
+                                            class="btn btn-success btn-outline-secondary btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                                    </div>
+
+                                    <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản? <a
+                                            href="./index.html" class="fw-bold text-body"><u>Đăng nhập tại
+                                                đây!</u></a>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="footer-container">
+            <div class="footer-follow">
+                <div class="ft-fl-logo">
+                    <a href="#">
+                        <img class="ft-img" src="https://shopdunk.com/images/thumbs/0012445_Logo_ShopDunk.png"
+                            alt="Shopdunk">
+                    </a>
+                </div>
+                <div class="ft-fl-about">
+                    <p>
+                        Năm 2020, ShopDunk trở thành đại lý ủy quyền của Apple. Chúng tôi phát triển chuỗi cửa hàng
+                        tiêu chuẩn và Apple Mono Store nhằm mang đến trải nghiệm tốt nhất về sản phẩm và dịch vụ của
+                        Apple cho người dùng Việt Nam.
+                    </p>
+                </div>
+                <div class="ft-fl-social">
+                    <div class="ft-icon-social">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook fa-2xl"></i>
+                        </a>
+                    </div>
+                    <div class="ft-icon-social">
+                        <a href="#">
+                            <i class="fa-brands fa-tiktok fa-2xl"></i>
+                        </a>
+                    </div>
+                    <div class="ft-icon-social">
+                        <a href="#">
+                            <i class="fa-brands fa-instagram fa-2xl"></i>
+                        </a>
+                    </div>
+                    <div class="ft-icon-social">
+                        <a href="#">
+                            <i class="fa-brands fa-youtube fa-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-infomation">
+                <div class="ft-header">
+                    Thông tin
+                </div>
+                <ul class="ft-list">
+                    <li>
+                        <a href="">Tin tức</a>
+                    </li>
+                    <li>
+                        <a href="">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="">Check IMEI</a>
+                    </li>
+                    <li>
+                        <a href="">Phương thức thanh toán</a>
+                    </li>
+                    <li>
+                        <a href="">Bảo hành & sửa chữa</a>
+                    </li>
+                    <li>
+                        <a href="">Đánh giá</a>
+                    </li>
+                    <li>
+                        <a href="">Tuyển dụng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-service">
+                <div class="ft-header">
+                    Chính sách
+                </div>
+                <ul class="ft-list">
+                    <li><a href="#">Thu cũ đổi mới</a></li>
+                    <li><a href="#">Giao hàng</a></li>
+                    <li><a href="#">Hủy giao hàng</a></li>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Đổi trả</a></li>
+                    <li><a href="#">Giải quyết khiếu nại</a></li>
+                    <li><a href="#">Bảo mật thông tin</a></li>
+                    <li><a href="#">Trả góp</a></li>
+                </ul>
+            </div>
+            <div class="footer-account">
+                <div class="ft-header">
+                    Địa chỉ & liên hệ
+                </div>
+                <ul class="ft-list">
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="#">Đơn đặt hàng</a></li>
+                    <li><a href="#">Hệ thống cửa hàng</a></li>
+                    <li><a href="#">Tìm store trên Google Map</a></li>
+                    <li><a href="#">Mua hàng: <span><a id="ft-hot-line" href="">1900.6626</a></span></a>
+                        <ul>
+                            <li>Nhánh 1: Khu vực Hà Nội và các tỉnh phía Bắc</li>
+                            <li>Nhánh 2: Khu vực Tp Hồ Chí Minh và các tỉnh phía Nam </li>
+                            <li>Nhánh 3: Khiếu nại và góp ý</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Doanh nghiệp: <span><a id="ft-hot-line" href="">0822.668.688</a></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<!-- DataBase -->
+<script src="./database/data_iphone.js"></script>
+<!-- Script -->
+<script src="./script/action.js"></script>
+<!-- Bootstrap  -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+</html>
