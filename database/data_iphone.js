@@ -1,4 +1,4 @@
-export let iphone_data = [
+export let data_iphone = [
     {
         id: 1,
         brand: 'apple',
@@ -89,4 +89,4 @@ export let iphone_data = [
         oldPrice: [34990000, 37490000, 43990000, 49990000],
         actualPrice: [27390000, 30190000, 37490000, 41990000],
     },
-]
+];
