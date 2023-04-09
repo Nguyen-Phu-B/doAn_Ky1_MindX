@@ -5,7 +5,7 @@ let renderText = '';
 
 for (let item of mac_data) {
   console.log(item);
-  renderText += `<div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-3">
+  renderText += `<div class="col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <div class="box-item">
       <div class="box-product">
         <div class="box-img">
