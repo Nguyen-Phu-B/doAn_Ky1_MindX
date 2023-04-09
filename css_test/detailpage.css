@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
+#content-mac .page-body {
+  display: flex;
+}
+
+#content-mac .gallery,
+#content-mac .overview {
+  width: 50%;
+}
+
+#content-mac .gallery img {
+  width: 100%;
+}
+
+#content-mac .wrapper-info .product-name {
+  font-weight: bold;
+}
+#content-mac .product-details-page .prices {
+  display: flex;
+}
+
+#content-mac .product-details-page .price-actual {
+  color: blue;
+  font-weight: bold;
+}
+
+#content-mac .product-details-page .price-old {
+  color: #666;
+  opacity: 0.8;
+  text-decoration: line-through;
+  margin-left: 10px;
+}

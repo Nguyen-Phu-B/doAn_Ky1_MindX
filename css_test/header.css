@@ -1,0 +1,173 @@
+/* ===================================
+Phần header box  
+Gồm 3 khối div bên trong, sắp xếp dạng flex, space around */
+
+#header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(84, 84, 84);
+  position: fixed;
+  top: 0;
+  height: 68px;
+  z-index: 999;
+}
+
+/* ===================================
+Phần header logo 
+Chứa img logo, sử dụng giới hạn max-height 
+*/
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 0;
+}
+
+.header-logo img {
+  max-height: 40px;
+}
+/* ===================================
+Phần menu 
+*/
+
+/* sắp xếp menu theo flex*/
+.top-menu {
+  display: flex;
+  margin-bottom: 0;
+}
+
+/* định dạng các ul, il*/
+.top-menu,
+.subnav {
+  list-style: none;
+}
+
+/* định dạng các liên kêt */
+.header-menu a {
+  text-decoration: none !important;
+  color: white;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* thực hiện padding cho menu cấp 1*/
+.top-menu > li {
+  padding: 20px 10px;
+  position: relative;
+}
+
+/* thực hiện padding cho menu cấp 2*/
+.top-menu .subnav > li {
+  padding: 5px;
+}
+
+/* định dạng menu cấp 2, mặc định ẩn, khi có hover mới hiện ra*/
+.top-menu .subnav {
+  position: absolute;
+  background-color: rgb(84, 84, 84);
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+}
+
+.header-menu li:hover .subnav {
+  visibility: visible;
+}
+
+/*đổi màu nền khi hover các li*/
+.header-menu .subnav li:hover {
+  background-color: #626265;
+}
+
+/* Độ rộng của mỗi menu cấp 2*/
+.header-menu .top-menu .subnav {
+  width: 120px;
+}
+
+/* ===================================
+Phần wrapper
+Chứa 3 div: search, user, bagshop
+*/
+.header-wrapper {
+  display: flex;
+}
+
+.header-search,
+.header-bagshop,
+.header-user {
+  padding: 20px 10px;
+}
+
+.header-wrapper i {
+  color: white;
+}
+
+.header-wrapper .subnav-user {
+  list-style: none;
+}
+
+/* định dạng các liên kêt */
+.header-wrapper a {
+  text-decoration: none !important;
+  color: black;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.header-user {
+  position: relative;
+}
+
+.header-user .subnav-user {
+  padding: 10px;
+  width: 140px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #000;
+}
+
+.subnav-user li {
+  padding: 10px 0 10px 5px;
+}
+
+.header-user:hover .subnav-user {
+  visibility: visible;
+}
+
+.subnav-user > li:hover {
+  opacity: 0.6;
+}
+
+/* ===================================
+Bổ sung icon bar
+*/
+
+.header-toggle {
+  padding: 20px 10px;
+  color: white;
+  display: none;
+}
+
+/* ===================================
+Responsive
+*/
+
+@media screen and (max-width: 1000px) {
+  .header-menu {
+    display: none;
+  }
+  .header-toggle {
+    display: block;
+  }
+
+  #header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
