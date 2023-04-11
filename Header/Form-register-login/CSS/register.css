@@ -1,0 +1,27 @@
+.gradient-custom-3 {
+    padding-top: 85px ;
+    padding-bottom: 22px;
+    display: inline-block;
+    height: 800px;
+    background: #000000;
+    
+
+    background: -webkit-linear-gradient(to right, rgb(125 135 128 / 50%), rgb(72 124 149 / 50%));
+    background: linear-gradient(to right, rgb(125 135 128 / 50%), rgb(72 124 149 / 50%));
+}
+
+.gradient-custom-4 {
+    
+    background: -webkit-linear-gradient(to right, rgb(243 243 243), rgb(5 95 139));
+    background: linear-gradient(to right,rgb(243 243 243), rgb(5 95 139));
+}
+
+/* .gradient-custom-5 {
+    background-color: #1d1d1f;
+    background: -webkit-linear-gradient(to right, rgb(125 135 128 / 50%), rgb(72 124 149 / 50%));
+    background: linear-gradient(to right, rgb(125 135 128 / 50%), rgb(72 124 149 / 50%));
+} */
+
+#id label>.luu-y {
+    color: red;
+}
