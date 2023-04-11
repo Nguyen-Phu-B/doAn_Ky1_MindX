@@ -1,0 +1,46 @@
+/* .box-booth {
+  display: flex;
+} */
+#content .box-header {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+#content .box-booth {
+  display: flex;
+  justify-content: space-around;
+}
+
+#content .box-product {
+  max-width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#content .box-img img {
+  width: 100%;
+}
+
+#content .box-title {
+  padding: 10px;
+  font-weight: bold;
+}
+
+#content .box-price {
+  display: flex;
+}
+
+#content .price-actual {
+  padding: 10px;
+  color: blue;
+  font-weight: bold;
+}
+
+#content .price-old {
+  padding: 10px;
+  color: #666;
+  opacity: 0.8;
+  text-decoration: line-through;
+}
