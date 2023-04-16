@@ -1,5 +1,20 @@
+//get parameter from url
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const product = urlParams.get('product');
+
 //import du lieu
 import { mac_data } from './data_mac.js';
+import { watch_data } from './data_watch.js';
+
+let data;
+
+if (product == 'mac') {
+  data = mac_data;
+} else if (product == 'watch') {
+  data = watch_data;
+}
+
 let renderText = '';
 
 //load du lieu container mac
@@ -13,13 +28,13 @@ $container.innerHTML = renderText;
 //load toan du san pham Mac
 let $itemMac = document.querySelector('#itemMac');
 renderText = '';
-for (let i = 0; i < mac_data.length; i++) {
-  let image = mac_data[i].color_img[0]['img'];
-  let oldPrice = mac_data[i].oldPrice;
-  let actualPrice = mac_data[i].actualPrice;
-  let title = mac_data[i].model;
-  let dataProduct = mac_data[i].product;
-  let dataId = mac_data[i].id;
+for (let i = 0; i < data.length; i++) {
+  let image = data[i].color_img[0]['img'];
+  let oldPrice = data[i].oldPrice;
+  let actualPrice = data[i].actualPrice;
+  let title = data[i].model;
+  let dataProduct = data[i].product;
+  let dataId = data[i].id;
   console.log(dataProduct, dataId);
   renderText += `<div class="col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <div class="box-item">

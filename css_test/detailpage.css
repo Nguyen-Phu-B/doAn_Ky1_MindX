@@ -120,3 +120,11 @@
 #content-mac .attributes .attribute-color-gold input[type='radio'] + div {
   background: rgba(254, 233, 211, 255);
 }
+
+#content-mac .attributes .attribute-color-red input[type='radio'] + div {
+  background: rgba(219, 60, 58, 255);
+}
+
+#content-mac .attributes .attribute-color-graphite input[type='radio'] + div {
+  background: rgba(93, 94, 89, 255);
+}
