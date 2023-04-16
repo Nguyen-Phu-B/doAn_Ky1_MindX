@@ -418,7 +418,7 @@ export let data_iphone = [
         id: 26,
         brand: 'apple',
         series: '14',
-        model: 'iphone 14 pro max',
+        model: 'iphone 14 pro max 512gb',
         memory: 512, 
         color: ['space black', 'silver', 'gold', 'deep purple'],
         imgProduct: [
@@ -434,7 +434,7 @@ export let data_iphone = [
         id: 27,
         brand: 'apple',
         series: '14',
-        model: 'iphone 14 pro max',
+        model: 'iphone 14 pro max 1tb',
         memory: 1,
         color: ['space black', 'silver', 'gold', 'deep purple'],
         imgProduct: [

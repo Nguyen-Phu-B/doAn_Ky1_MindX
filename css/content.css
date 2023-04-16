@@ -19,6 +19,10 @@
     margin-bottom: 80px;
 }
 
+.box-booth .box-product:nth-child(n+9) {
+    display: none;
+}
+
 .box-product {
     position: relative;
     /* height: 286px; */
@@ -36,6 +40,11 @@
 
 .box-product .box-img img {
     width: 80%;
+}
+
+.box-product .box-title>a {
+    text-decoration: none;
+    color: #000;
 }
 
 .box-product .box-title {

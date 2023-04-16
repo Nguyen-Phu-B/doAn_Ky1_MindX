@@ -104,7 +104,8 @@
     border: #515154 solid 0.5px;
     text-align: center;
     background-color: #fff;
-    color: #515154;
+    color: #4d4dc7;
+    font-size: 12px
 }
 
 .header-user {
