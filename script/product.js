@@ -6,6 +6,7 @@ const product = urlParams.get('product');
 //import du lieu
 import { mac_data } from './data_mac.js';
 import { watch_data } from './data_watch.js';
+import { iphone_data } from './data_iphone.js';
 
 let data;
 
@@ -13,6 +14,8 @@ if (product == 'mac') {
   data = mac_data;
 } else if (product == 'watch') {
   data = watch_data;
+} else if (product == 'iphone') {
+  data = iphone_data;
 }
 
 let renderText = '';

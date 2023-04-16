@@ -108,23 +108,40 @@
 #content-mac .attributes .attribute-color-silver input[type='radio'] + div {
   background: rgba(192, 192, 192, 255);
 }
-
 #content-mac .attributes .attribute-color-starlight input[type='radio'] + div {
   background: rgba(244, 233, 213, 255);
 }
-
 #content-mac .attributes .attribute-color-midnight input[type='radio'] + div {
   background: rgba(0, 0, 0, 255);
 }
-
 #content-mac .attributes .attribute-color-gold input[type='radio'] + div {
   background: rgba(254, 233, 211, 255);
 }
-
 #content-mac .attributes .attribute-color-red input[type='radio'] + div {
   background: rgba(219, 60, 58, 255);
 }
-
 #content-mac .attributes .attribute-color-graphite input[type='radio'] + div {
   background: rgba(93, 94, 89, 255);
+}
+/* update */
+#content-mac .attributes .attribute-color-pink input[type='radio'] + div {
+  background: rgba(235, 185, 175, 255);
+}
+#content-mac .attributes .attribute-color-blue input[type='radio'] + div {
+  background: rgba(23, 76, 110, 255);
+}
+#content-mac .attributes .attribute-color-green input[type='radio'] + div {
+  background: rgba(47, 96, 15, 255);
+}
+#content-mac .attributes .attribute-color-purple input[type='radio'] + div {
+  background: rgba(187, 180, 231, 255);
+}
+#content-mac .attributes .attribute-color-yellow input[type='radio'] + div {
+  background: rgba(253, 235, 101, 255);
+}
+#content-mac .attributes .attribute-color-deeppurple input[type='radio'] + div {
+  background: rgba(97, 89, 105, 255);
+}
+#content-mac .attributes .attribute-color-spaceblack input[type='radio'] + div {
+  background: rgba(76, 75, 73, 255);
 }

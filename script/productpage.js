@@ -7,8 +7,9 @@ const product2 = Number(urlParams.get('id'));
 //import dữ liệu và xác định sản phẩm cần load lên page
 import { mac_data } from './data_mac.js';
 import { watch_data } from './data_watch.js';
+import { iphone_data } from './data_iphone.js';
 
-let dataAll = [...mac_data, ...watch_data];
+let dataAll = [...mac_data, ...watch_data, ...iphone_data];
 let product = '';
 
 //tìm sản phẩm
@@ -124,6 +125,43 @@ if (product != '') {
     } else if (item['color'] == 'graphite') {
       colorText += `<label class="attribute-color-graphite">
       <input type="radio" name="color_mac" value="graphite" />
+      <div></div>
+    </label>`;
+    }
+    //update
+    else if (item['color'] == 'pink') {
+      colorText += `<label class="attribute-color-pink">
+      <input type="radio" name="color_mac" value="pink" />
+      <div></div>
+    </label>`;
+    } else if (item['color'] == 'blue') {
+      colorText += `<label class="attribute-color-blue">
+      <input type="radio" name="color_mac" value="blue" />
+      <div></div>
+    </label>`;
+    } else if (item['color'] == 'green') {
+      colorText += `<label class="attribute-color-green">
+      <input type="radio" name="color_mac" value="green" />
+      <div></div>
+    </label>`;
+    } else if (item['color'] == 'purple') {
+      colorText += `<label class="attribute-color-purple">
+      <input type="radio" name="color_mac" value="purple" />
+      <div></div>
+    </label>`;
+    } else if (item['color'] == 'yellow') {
+      colorText += `<label class="attribute-color-yellow">
+      <input type="radio" name="color_mac" value="yellow" />
+      <div></div>
+    </label>`;
+    } else if (item['color'] == 'deeppurple') {
+      colorText += `<label class="attribute-color-deeppurple">
+      <input type="radio" name="color_mac" value="deeppurple" />
+      <div></div>
+    </label>`;
+    } else if (item['color'] == 'spaceblack') {
+      colorText += `<label class="attribute-color-spaceblack">
+      <input type="radio" name="color_mac" value="spaceblack" />
       <div></div>
     </label>`;
     }

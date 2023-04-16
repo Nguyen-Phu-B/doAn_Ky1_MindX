@@ -1,6 +1,7 @@
 //LOAD DU LIEU THEO PRODUCT
 import { mac_data } from './data_mac.js';
 import { watch_data } from './data_watch.js';
+import { iphone_data } from './data_iphone.js';
 let $content = document.getElementById('content');
 let $boxBooth;
 let $link;
@@ -12,6 +13,7 @@ let data;
 let list_proc_name = [
   { name: 'Mac', data: mac_data, type: 'mac' },
   { name: 'Watch', data: watch_data, type: 'watch' },
+  { name: 'iPhone', data: iphone_data, type: 'iphone' },
 ];
 
 //Load title cho sản phẩm (MAC/Watch)
