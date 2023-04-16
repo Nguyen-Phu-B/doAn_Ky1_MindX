@@ -1,110 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="./css_test/detailpage.css" />
+    <link rel="stylesheet" href="./css/detailpage.css" />
     <!-- Load common header -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script>
-      $(function () {
-        $('#header').load('header.html');
-      });
+        $(function () {
+            $('#header').load('header.html');
+        }) 
     </script>
-  </head>
-  <body>
-    <div>
-      <div id="header"></div>
+</head>
 
-      <!-- content -->
-      <div id="content-mac">
-        <div class="product-details-page">
-          <!-- <div class="page-body">
-            <div class="gallery">
-              <div class="picture">
-                <img
-                  src="./img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="overview">
-              <div class="wrapper-info">
-                <div class="product-name">
-                  MacBook Pro 13 inch M2 (10 core| 8GB RAM| 256GB SSD)
+<body>
+    <div>
+        <!-- header -->
+        <div id="header"></div>
+        <!-- content -->
+        <div id="content-mac">
+            <!-- <div class="product-details-page">
+                <div class="page-body">
+                    <div class="gallery">
+                        <div class="picture">
+                            <img src="./img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg" alt="" />
+                        </div>
+                    </div>
+                    <div class="overview">
+                        <div class="wrapper-info">
+                            <div class="product-name">
+                                MacBook Pro 13 inch M2 (10 core| 8GB RAM| 256GB SSD)
+                            </div>
+                            <div class="star-review"></div>
+                        </div>
+                        <div class="prices">
+                            <div class="price-actual">27000000</div>
+                            <div class="price-old">32000000</div>
+                        </div>
+                        <div class="attributes">
+                            <div class="product-attribute">
+                                <div class="product-attribute-label">Màu sắc</div>
+                                <div class="product-attribute-input">
+                                    <label class="attribute-color-gray">
+                                        <input type="radio" name="color_mac" value="space gray" />
+                                        <div></div>
+                                    </label>
+                                    <label class="attribute-color-silver">
+                                        <input type="radio" name="color_mac" value="silver" />
+                                        <div></div>
+                                    </label>
+                                    <label class="attribute-color-starlight">
+                                        <input type="radio" name="color_mac" value="starlight" />
+                                        <div></div>
+                                    </label>
+                                    <label class="attribute-color-midnight">
+                                        <input type="radio" name="color_mac" value="midnight" />
+                                        <div></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-cart">
+                            <div class="add-to-cart-panel">MUA NGAY</div>
+                        </div>
+                        <div class="product-policy">
+                            <div class="prd-policy">
+                                <ul class="fa-ul">
+                                    <li>
+                                        <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Hư gì đổi nấy
+                                        12 tháng
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Bảo hành
+                                        chính hãng 1 năm
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Giao hàng
+                                        nhanh toàn quốc
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Gọi đặt mua
+                                        1900 6626 (7:30 -
+                                        22:00)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="star-review"></div>
-              </div>
-              <div class="prices">
-                <div class="price-actual">27000000</div>
-                <div class="price-old">32000000</div>
-              </div>
-              <div class="attributes">
-                <div class="product-attribute">
-                  <div class="product-attribute-label">Màu sắc</div>
-                  <div class="product-attribute-input">
-                    <label class="attribute-color-gray">
-                      <input type="radio" name="color_mac" value="space gray" />
-                      <div></div>
-                    </label>
-                    <label class="attribute-color-silver">
-                      <input type="radio" name="color_mac" value="silver" />
-                      <div></div>
-                    </label>
-                    <label class="attribute-color-starlight">
-                      <input type="radio" name="color_mac" value="starlight" />
-                      <div></div>
-                    </label>
-                    <label class="attribute-color-midnight">
-                      <input type="radio" name="color_mac" value="midnight" />
-                      <div></div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="add-cart">
-                <div class="add-to-cart-panel">MUA NGAY</div>
-              </div>
-              <div class="product-policy">
-                <div class="prd-policy">
-                  <ul class="fa-ul">
-                    <li>
-                      <span class="fa-li"
-                        ><i class="fa-solid fa-circle-check"></i></span
-                      >Hư gì đổi nấy 12 tháng
-                    </li>
-                    <li>
-                      <span class="fa-li"
-                        ><i class="fa-solid fa-circle-check"></i></span
-                      >Bảo hành chính hãng 1 năm
-                    </li>
-                    <li>
-                      <span class="fa-li"
-                        ><i class="fa-solid fa-circle-check"></i></span
-                      >Giao hàng nhanh toàn quốc
-                    </li>
-                    <li>
-                      <span class="fa-li"
-                        ><i class="fa-solid fa-circle-check"></i></span
-                      >Gọi đặt mua 1900 6626 (7:30 - 22:00)
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div> -->
+            </div> -->
         </div>
-      </div>
     </div>
     <!-- <script type="module" src="./script/action.js"></script> -->
     <script type="module" src="./script/productpage.js"></script>
     <!-- <script src="./script/detailpage.js"></script> -->
-  </body>
+</body>
+
 </html>
