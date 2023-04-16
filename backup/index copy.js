@@ -1,5 +1,5 @@
 //LOAD DU LIEU THEO PRODUCT
-import { mac_data } from './data_mac.js';
+import { mac_data } from '../script/data_mac.js';
 let $content = document.getElementById('content');
 let $boxBooth;
 let $productPage;
