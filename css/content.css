@@ -26,7 +26,8 @@
     padding: 39px 20px 31px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin: 0 10px;
+    margin: 0 10px 36px;
+
 }
 
 .box-product .box-img {
@@ -41,6 +42,9 @@
     padding-top: 32px;
     font-size: 18px;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .box-product .box-price {
