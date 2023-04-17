@@ -121,7 +121,7 @@ const changeItemCount = () => {
     if (!productCount) {
         return;
     } else {
-        document.getElementById('cal_items').textContent = productCount;
+        document.getElementById('cal_items').innerHTML = productCount;
     }
 }
 

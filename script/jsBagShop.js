@@ -2,7 +2,23 @@ import { data_iphone } from '../database/data_iphone.js';
 import { mac_data } from '../database/data_maca.js';
 
 let products = JSON.parse(localStorage.getItem('products')) || [];;
-let productBag = JSON.parse(localStorage.getItem('productsCount')) || [];;
+
+// KHÔNG HIỂU SAO KHÔNG LẤY ĐƯỢC ID getElementById('cal_items')
+// // change sl bag
+// const changeItemCount = () => {
+//     // Lấy giá trị của cookie 'productCount'
+//     const productCount = products.length;
+//     console.log(productCount);
+
+//     // Cập nhật nội dung của phần tử có id 'cal_items' với giá trị từ cookie
+//     if (!productCount) {
+//         return;
+//     } else {
+//         document.getElementById('cal_items').innerHTML = productCount;
+//     }
+// }
+
+// changeItemCount();
 
 const loadDataBagShop = (prData) => {
     let _render = '';
@@ -129,11 +145,12 @@ deleteProductIcons.forEach(icon => {
         const row = event.target.closest('tr');
         event.preventDefault();
         let idDta = parseInt(event.target.dataset.id);
-        console.log(idDta)
         let validate = confirm('Bạn có chắc chắn muốn xóa hàng sản phẩm này?');
         if (validate = true) {
             row.remove(); // Xóa hàng sản phẩm
             updateDataToLocal(idDta, 0);
+            console.log('update', products)
+            localStorage.setItem('products', JSON.stringify(products));
             updateTotal(); // Cập nhật tổng
         }
     });
