@@ -380,7 +380,7 @@ export let data_iphone = [
             '/img/iphone/iphone14pro/iphone_14_pro_deeppurple.png',
         ],
         oldPrice: 46990000,
-        actualPrice: 3749000,
+        actualPrice: 37490000,
     },
     {
         id: 24,

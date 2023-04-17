@@ -8,12 +8,12 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Air M1 2020 (8GB RAM | 256GB SSD)',
     color: ['space gray', 'silver', 'gold'],
-    oldPrice: [28990000],
-    actualPrice: [18790000],
-    img: [
-      './img/mac/macbookair/macbookair_m1_spacegray.webp',
-      './img/mac/macbookair/macbookair_m1_silver.webp',
-      './img/mac/macbookair/macbookair_m1_gold.webp',
+    oldPrice: 28990000,
+    actualPrice: 18790000,
+    imgProduct: [
+      '/img/mac/macbookair/macbookair_m1_spacegray.webp',
+      '/img/mac/macbookair/macbookair_m1_silver.webp',
+      '/img/mac/macbookair/macbookair_m1_gold.webp',
     ],
   },
   {
@@ -24,13 +24,13 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Air M2 2022 (8GB RAM | 256GB SSD)',
     color: ['space gray', 'silver', 'starlight', 'midnight'],
-    oldPrice: [32990000],
-    actualPrice: [27090000],
-    img: [
-      './img/mac/macbookair/macbookair_m2_spacegray.png',
-      './img/mac/macbookair/macbookair_m2_silver.png',
-      './img/mac/macbookair/macbookair_m2_starlight.png',
-      './img/mac/macbookair/macbookair_m2_midnight.png',
+    oldPrice: 32990000,
+    actualPrice: 27090000,
+    imgProduct: [
+      '/img/mac/macbookair/macbookair_m2_spacegray.png',
+      '/img/mac/macbookair/macbookair_m2_silver.png',
+      '/img/mac/macbookair/macbookair_m2_starlight.png',
+      '/img/mac/macbookair/macbookair_m2_midnight.png',
     ],
   },
   {
@@ -41,13 +41,13 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Air M2 2022 (8GB RAM | 512GB SSD)',
     color: ['space gray', 'silver', 'starlight', 'midnight'],
-    oldPrice: [39990000],
-    actualPrice: [32990000],
-    img: [
-      './img/mac/macbookair/macbookair_m2_spacegray.png',
-      './img/mac/macbookair/macbookair_m2_silver.png',
-      './img/mac/macbookair/macbookair_m2_starlight.png',
-      './img/mac/macbookair/macbookair_m2_midnight.png',
+    oldPrice: 39990000,
+    actualPrice: 32990000,
+    imgProduct: [
+      '/img/mac/macbookair/macbookair_m2_spacegray.png',
+      '/img/mac/macbookair/macbookair_m2_silver.png',
+      '/img/mac/macbookair/macbookair_m2_starlight.png',
+      '/img/mac/macbookair/macbookair_m2_midnight.png',
     ],
   },
   {
@@ -58,13 +58,13 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Air M2 2022 (16GB RAM | 256GB SSD)',
     color: ['space gray', 'silver', 'starlight', 'midnight'],
-    oldPrice: [39990000],
-    actualPrice: [32990000],
-    img: [
-      './img/mac/macbookair/macbookair_m2_spacegray.png',
-      './img/mac/macbookair/macbookair_m2_silver.png',
-      './img/mac/macbookair/macbookair_m2_starlight.png',
-      './img/mac/macbookair/macbookair_m2_midnight.png',
+    oldPrice: 39990000,
+    actualPrice: 32990000,
+    imgProduct: [
+      '/img/mac/macbookair/macbookair_m2_spacegray.png',
+      '/img/mac/macbookair/macbookair_m2_silver.png',
+      '/img/mac/macbookair/macbookair_m2_starlight.png',
+      '/img/mac/macbookair/macbookair_m2_midnight.png',
     ],
   },
   {
@@ -75,13 +75,13 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Air M2 2022 (16GB RAM | 512GB SSD)',
     color: ['space gray', 'silver', 'starlight', 'midnight'],
-    oldPrice: [44990000],
-    actualPrice: [38990000],
-    img: [
-      './img/mac/macbookair/macbookair_m2_spacegray.png',
-      './img/mac/macbookair/macbookair_m2_silver.png',
-      './img/mac/macbookair/macbookair_m2_starlight.png',
-      './img/mac/macbookair/macbookair_m2_midnight.png',
+    oldPrice: 44990000,
+    actualPrice: 38990000,
+    imgProduct: [
+      '/img/mac/macbookair/macbookair_m2_spacegray.png',
+      '/img/mac/macbookair/macbookair_m2_silver.png',
+      '/img/mac/macbookair/macbookair_m2_starlight.png',
+      '/img/mac/macbookair/macbookair_m2_midnight.png',
     ],
   },
   //macbook pro
@@ -93,9 +93,9 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Pro M1 2020 (8 core GPU| 8GB RAM| 256GB SSD)',
     color: ['silver'],
-    oldPrice: [34990000],
-    actualPrice: [27950000],
-    img: ['./img/mac/macbookpro/macbookpro_m1_silver.webp'],
+    oldPrice: 34990000,
+    actualPrice: 27950000,
+    imgProduct: ['/img/mac/macbookpro/macbookpro_m1_silver.webp'],
   },
   {
     id: 7,
@@ -105,11 +105,11 @@ export let mac_data = [
     display: 14,
     model: 'MacBook Pro 14 M1 Pro (16 Core/16GB/1TB)',
     color: ['space gray', 'silver'],
-    oldPrice: [68000000],
-    actualPrice: [49790000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m1pro_spacegray.webp',
-      './img/mac/macbookpro/macbookpro_m1pro_silver.webp',
+    oldPrice: 68000000,
+    actualPrice: 49790000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m1pro_spacegray.webp',
+      '/img/mac/macbookpro/macbookpro_m1pro_silver.webp',
     ],
   },
   {
@@ -120,9 +120,9 @@ export let mac_data = [
     display: 14,
     model: 'MacBook Pro 14 M1 Max (32 Core GPU| 1TB SSD)',
     color: ['silver'],
-    oldPrice: [90500000],
-    actualPrice: [78990000],
-    img: ['./img/mac/macbookpro/macbookpro_m1max_silver.webp'],
+    oldPrice: 90500000,
+    actualPrice: 78990000,
+    imgProduct: ['/img/mac/macbookpro/macbookpro_m1max_silver.webp'],
   },
   {
     id: 9,
@@ -132,11 +132,11 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Pro 13 inch M2 (10 core| 8GB RAM| 256GB SSD)',
     color: ['space gray', 'silver'],
-    oldPrice: [35990000],
-    actualPrice: [29990000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2_spacegray.webp',
-      './img/mac/macbookpro/macbookpro_m2_silver.webp',
+    oldPrice: 35990000,
+    actualPrice: 29990000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2_spacegray.webp',
+      '/img/mac/macbookpro/macbookpro_m2_silver.webp',
     ],
   },
   {
@@ -147,11 +147,11 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Pro 13 inch M2 (10 core| 8GB RAM| 512GB SSD)',
     color: ['space gray', 'silver'],
-    oldPrice: [41990000],
-    actualPrice: [34490000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2_spacegray.webp',
-      './img/mac/macbookpro/macbookpro_m2_silver.webp',
+    oldPrice: 41990000,
+    actualPrice: 34490000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2_spacegray.webp',
+      '/img/mac/macbookpro/macbookpro_m2_silver.webp',
     ],
   },
   {
@@ -162,11 +162,11 @@ export let mac_data = [
     display: 13,
     model: 'MacBook Pro 13 inch M2 (10 core| 16GB RAM| 256GB SSD)',
     color: ['space gray', 'silver'],
-    oldPrice: [41990000],
-    actualPrice: [35990000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2_spacegray.webp',
-      './img/mac/macbookpro/macbookpro_m2_silver.webp',
+    oldPrice: 41990000,
+    actualPrice: 35990000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2_spacegray.webp',
+      '/img/mac/macbookpro/macbookpro_m2_silver.webp',
     ],
   },
 
@@ -178,11 +178,11 @@ export let mac_data = [
     display: 14,
     model: 'MacBook Pro 14 inch M2 Pro (16 Core| 16GB| 512GB)',
     color: ['space gray', 'silver'],
-    oldPrice: [55000000],
-    actualPrice: [48750000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2pro_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2pro_silver.jpeg',
+    oldPrice: 55000000,
+    actualPrice: 48750000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2pro_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2pro_silver.jpeg',
     ],
   },
   {
@@ -193,11 +193,11 @@ export let mac_data = [
     display: 14,
     model: 'MacBook Pro 14 inch M2 Pro (19 Core| 16GB| 1TB)',
     color: ['space gray', 'silver'],
-    oldPrice: [68000000],
-    actualPrice: [60750000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2pro_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2pro_silver.jpeg',
+    oldPrice: 68000000,
+    actualPrice: 60750000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2pro_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2pro_silver.jpeg',
     ],
   },
 
@@ -209,11 +209,11 @@ export let mac_data = [
     display: 14,
     model: 'MacBook Pro 14 inch M2 Pro (16 Core| 32GB| 512GB) (CTO)',
     color: ['space gray', 'silver'],
-    oldPrice: [59000000],
-    actualPrice: [56990000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2pro_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2pro_silver.jpeg',
+    oldPrice: 59000000,
+    actualPrice: 56990000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2pro_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2pro_silver.jpeg',
     ],
   },
 
@@ -225,11 +225,11 @@ export let mac_data = [
     display: 16,
     model: 'MacBook Pro 16 inch M2 Pro (19 Core| 16GB| 512GB)',
     color: ['space gray', 'silver'],
-    oldPrice: [68000000],
-    actualPrice: [60750000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
+    oldPrice: 68000000,
+    actualPrice: 60750000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
     ],
   },
   {
@@ -240,11 +240,11 @@ export let mac_data = [
     display: 16,
     model: 'MacBook Pro 16 inch M2 Pro (19 Core| 16GB| 1TB)',
     color: ['space gray', 'silver'],
-    oldPrice: [73000000],
-    actualPrice: [65350000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
+    oldPrice: 73000000,
+    actualPrice: 65350000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
     ],
   },
   {
@@ -255,11 +255,11 @@ export let mac_data = [
     display: 16,
     model: 'MacBook Pro 16 inch M2 Pro (19 Core| 32GB| 512GB) - CTO',
     color: ['space gray', 'silver'],
-    oldPrice: [72000000],
-    actualPrice: [69990000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
+    oldPrice: 72000000,
+    actualPrice: 69990000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
     ],
   },
   {
@@ -270,11 +270,11 @@ export let mac_data = [
     display: 16,
     model: 'MacBook Pro 16 inch M2 Pro (19 Core| 32GB| 1TB) - CTO',
     color: ['space gray', 'silver'],
-    oldPrice: [78000000],
-    actualPrice: [74990000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
+    oldPrice: 78000000,
+    actualPrice: 74990000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2pro_16_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2pro_16_silver.jpeg',
     ],
   },
 
@@ -286,11 +286,11 @@ export let mac_data = [
     display: 14,
     model: 'MacBook Pro 14 inch M2 Max (30 Core| 32GB| 1TB)',
     color: ['space gray', 'silver'],
-    oldPrice: [88000000],
-    actualPrice: [73750000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
+    oldPrice: 88000000,
+    actualPrice: 73750000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
     ],
   },
 
@@ -302,11 +302,11 @@ export let mac_data = [
     display: 16,
     model: 'MacBook Pro 16 inch M2 Max (38 Core| 32GB| 1TB)',
     color: ['space gray', 'silver'],
-    oldPrice: [94990000],
-    actualPrice: [83500000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2max_16_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2max_16_silver.jpeg',
+    oldPrice: 94990000,
+    actualPrice: 83500000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2max_16_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2max_16_silver.jpeg',
     ],
   },
   {
@@ -317,11 +317,11 @@ export let mac_data = [
     display: 14,
     model: 'MacBook Pro 14 inch M2 Max (30 Core| 64GB| 1TB) - CTO',
     color: ['space gray', 'silver'],
-    oldPrice: [92000000],
-    actualPrice: [91900000],
-    img: [
-      './img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
-      './img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
+    oldPrice: 92000000,
+    actualPrice: 91900000,
+    imgProduct: [
+      '/img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
+      '/img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
     ],
   },
 ];

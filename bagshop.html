@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/bagshop.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+            $('#footer').load('footer.html');
+        })
+    </script>
+    <script type="module" type="text/javascript" src="./script/jsBagShop.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <div class="bag-content">
+        <div class="bag-product">
+            <div class="tbl-details">
+                <div class="tbl-wrapper">
+                    <table class="tbl-cart">
+                        <thead>
+                            <tr>
+                                <th class="align-left img-product">Hình ảnh</th>
+                                <th class="align-left product">Tên sản phẩm</th>
+                                <th class="align-left price-product">Giá bán</th>
+                                <th class="align-left count-product">Số lượng</th>
+                                <th class="align-left edit-tbl"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_tble">
+                            <!-- <tr>
+                                <td class="img-product">
+                                    <a href="">
+                                        <img src="./img/iphone/iphone14/iphone_14_blue.png" alt="">
+                                    </a>
+                                </td>
+                                <td class="product">
+                                    <a class="title-product" href=""><b>iPhone lạ lùng nào đó</b></a>
+                                    <div class="sub-product">
+                                        <p>Màu sắc: Space Green</p>
+                                    </div>
+                                    <div class="edit-item">
+                                        <a href="">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="price-product">
+                                    <b>12</b>
+                                </td>
+                                <td class="count-product">
+                                    <div class="inp-st">
+                                        <input type="text" name="" id="" value="1">
+                                    </div>
+                                </td>
+                                <td class="edit-tbl">
+                                    <a href="">
+                                        <i class="fa-solid fa-trash-can fa-xl"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="img-product">
+                                    <a href="">
+                                        <img src="./img/iphone/iphone14/iphone_14_blue.png" alt="">
+                                    </a>
+                                </td>
+                                <td class="product">
+                                    <a class="title-product" href=""><b>iPhone lạ lùng nào đó</b></a>
+                                    <div class="sub-product">
+                                        <p>Màu sắc: Space Green</p>
+                                    </div>
+                                    <div class="edit-item">
+                                        <a href="">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="price-product">
+                                    <b>32</b>
+                                </td>
+                                <td class="count-product">
+                                    <div class="inp-st">
+                                        <input type="text" name="" id="" value="1">
+                                    </div>
+                                </td>
+                                <td class="edit-tbl">
+                                    <a href="">
+                                        <i class="fa-solid fa-trash-can fa-xl"></i>
+                                    </a>
+                                </td>
+                            </tr> -->
+
+                        </tbody>
+                    </table>
+
+                    <div class="common-btn">
+                        <button class="btn-sbl">Tiếp tục mua sắm</button>
+                    </div>
+                </div>
+            </div>
+            <h2 class="h-title">Thông tin thanh toán</h2>
+            <div class="form-user-info">
+                <form class="form-wrapper">
+                    <input class="inp-fl" type="text" name="" id="inp_form_user" placeholder="Name">
+                    <div class="form-row m-20">
+                        <input class="inp-half" type="text" name="" id="inp_form_phone" placeholder="Phone Number">
+                        <input class="inp-half" type="text" name="" id="inp_form_email" placeholder="Email">
+                    </div>
+                    <b>Hình thức nhận hàng</b>
+                    <div class="m-20">
+                        <input class="mr-10" type="radio" name="way_rec" id="rad_store" value="store">
+                        <label class="mr-10" for="rad_store">Nhận tại cửa hàng</label>
+                        <input class="mr-10" type="radio" name="way_rec" id="rad_home" value="home">
+                        <label class="mr-10" for="rad_home">Nhận tại nhà</label>
+                    </div>
+                    <b>Địa chỉ nhận hàng</b>
+                    <input class="inp-fl m-20" type="text" name="" id="address_rec"
+                        placeholder="Exp: 123/12, Đường Đương Huyền, Phường Phương Huyền, Quận 1, Tp Hồ Chí Minh">
+                </form>
+            </div>
+
+
+        </div>
+
+        <div class="calc">
+            <div class="calc-wrapper">
+
+                <div class="voucher">
+                    <input class="inp-voucher" type="text" name="" id="" placeholder="Mã giảm giá">
+                    <button class="btn-voucher">Áp Dụng</button>
+                </div>
+
+                <div class="calc-price">
+                    <div class="sub-calc">
+                        <p>Tổng phụ:</p>
+                        <b id="sub_sum">0</b>
+                    </div>
+                    <div class="sub-calc">
+                        <p>Giảm giá:</p>
+                        <b id="dis_sum">0</b>
+                    </div>
+                    <div class="calc-sum">
+                        <p>Tổng cộng:</p>
+                        <b id="sum_price">0</b>
+                    </div>
+                </div>
+
+                <div class="calc-submit">
+                    <div class="checkbox-rule">
+                        <input class="check-rule" type="checkbox" name="" id="check-rule">
+                        <label for="check-rule"></label>
+                        <span class="check-span">Tôi đã đọc và đồng ý với <a
+                                href="https://shopdunk.com/chinh-sach-doi-tra">điều khoản và điều kiện</a> của
+                            website.</span>
+                    </div>
+                    <button class="btn-buy-submit">Tiến hành đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="osss"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+
+
+</html>
