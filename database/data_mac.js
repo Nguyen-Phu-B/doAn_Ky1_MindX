@@ -1,4 +1,4 @@
-export let mac_data = [
+export let data_mac = [
   //macbook air
   {
     product: 'mac',
@@ -13,15 +13,15 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookair/macbookair_m1_spacegray.webp',
+        img: '/img/mac/macbookair/macbookair_m1_spacegray.webp',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookair/macbookair_m1_silver.webp',
+        img: '/img/mac/macbookair/macbookair_m1_silver.webp',
       },
       {
         color: 'gold',
-        img: './img/mac/macbookair/macbookair_m1_gold.webp',
+        img: '/img/mac/macbookair/macbookair_m1_gold.webp',
       },
     ],
   },
@@ -39,19 +39,19 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookair/macbookair_m2_spacegray.png',
+        img: '/img/mac/macbookair/macbookair_m2_spacegray.png',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookair/macbookair_m2_silver.png',
+        img: '/img/mac/macbookair/macbookair_m2_silver.png',
       },
       {
         color: 'starlight',
-        img: './img/mac/macbookair/macbookair_m2_starlight.png',
+        img: '/img/mac/macbookair/macbookair_m2_starlight.png',
       },
       {
         color: 'midnight',
-        img: './img/mac/macbookair/macbookair_m2_midnight.png',
+        img: '/img/mac/macbookair/macbookair_m2_midnight.png',
       },
     ],
   },
@@ -68,19 +68,19 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookair/macbookair_m2_spacegray.png',
+        img: '/img/mac/macbookair/macbookair_m2_spacegray.png',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookair/macbookair_m2_silver.png',
+        img: '/img/mac/macbookair/macbookair_m2_silver.png',
       },
       {
         color: 'starlight',
-        img: './img/mac/macbookair/macbookair_m2_starlight.png',
+        img: '/img/mac/macbookair/macbookair_m2_starlight.png',
       },
       {
         color: 'midnight',
-        img: './img/mac/macbookair/macbookair_m2_midnight.png',
+        img: '/img/mac/macbookair/macbookair_m2_midnight.png',
       },
     ],
   },
@@ -97,19 +97,19 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookair/macbookair_m2_spacegray.png',
+        img: '/img/mac/macbookair/macbookair_m2_spacegray.png',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookair/macbookair_m2_silver.png',
+        img: '/img/mac/macbookair/macbookair_m2_silver.png',
       },
       {
         color: 'starlight',
-        img: './img/mac/macbookair/macbookair_m2_starlight.png',
+        img: '/img/mac/macbookair/macbookair_m2_starlight.png',
       },
       {
         color: 'midnight',
-        img: './img/mac/macbookair/macbookair_m2_midnight.png',
+        img: '/img/mac/macbookair/macbookair_m2_midnight.png',
       },
     ],
   },
@@ -126,19 +126,19 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookair/macbookair_m2_spacegray.png',
+        img: '/img/mac/macbookair/macbookair_m2_spacegray.png',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookair/macbookair_m2_silver.png',
+        img: '/img/mac/macbookair/macbookair_m2_silver.png',
       },
       {
         color: 'starlight',
-        img: './img/mac/macbookair/macbookair_m2_starlight.png',
+        img: '/img/mac/macbookair/macbookair_m2_starlight.png',
       },
       {
         color: 'midnight',
-        img: './img/mac/macbookair/macbookair_m2_midnight.png',
+        img: '/img/mac/macbookair/macbookair_m2_midnight.png',
       },
     ],
   },
@@ -156,7 +156,7 @@ export let mac_data = [
     color_img: [
       {
         color: 'silver',
-        img: './img/mac/macbookpro/macbookpro_m1_silver.webp',
+        img: '/img/mac/macbookpro/macbookpro_m1_silver.webp',
       },
     ],
   },
@@ -174,11 +174,11 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookpro/macbookpro_m1pro_spacegray.webp',
+        img: '/img/mac/macbookpro/macbookpro_m1pro_spacegray.webp',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookpro/macbookpro_m1pro_silver.webp',
+        img: '/img/mac/macbookpro/macbookpro_m1pro_silver.webp',
       },
     ],
   },
@@ -373,11 +373,11 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
+        img: '/img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
+        img: '/img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
       },
     ],
   },
@@ -396,11 +396,11 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookpro/macbookpro_m2max_16_spacegray.jpeg',
+        img: '/img/mac/macbookpro/macbookpro_m2max_16_spacegray.jpeg',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookpro/macbookpro_m2max_16_silver.jpeg',
+        img: '/img/mac/macbookpro/macbookpro_m2max_16_silver.jpeg',
       },
     ],
   },
@@ -418,11 +418,11 @@ export let mac_data = [
     color_img: [
       {
         color: 'space gray',
-        img: './img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
+        img: '/img/mac/macbookpro/macbookpro_m2max_spacegray.jpeg',
       },
       {
         color: 'silver',
-        img: './img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
+        img: '/img/mac/macbookpro/macbookpro_m2max_silver.jpeg',
       },
     ],
   },

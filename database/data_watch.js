@@ -1,4 +1,4 @@
-export let watch_data = [
+export let data_watch = [
   {
     product: 'watch',
     id: 1,

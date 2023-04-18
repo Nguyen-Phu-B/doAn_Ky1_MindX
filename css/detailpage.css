@@ -2,6 +2,9 @@
   box-sizing: border-box;
   /* border: 1px solid; */
 }
+#content {
+  margin-top: 68px;
+}
 
 #content-mac .page-body {
   display: flex;

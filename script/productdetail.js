@@ -4,16 +4,21 @@ const urlParams = new URLSearchParams(queryString);
 const product1 = urlParams.get('product');
 const product2 = Number(urlParams.get('id'));
 
-//import dữ liệu và xác định sản phẩm cần load lên page
-import { mac_data } from './data_mac.js';
-import { watch_data } from './data_watch.js';
+console.log(product1, product2);
 
-let dataAll = [...mac_data, ...watch_data];
+//import dữ liệu và xác định sản phẩm cần load lên page
+import { data_mac } from '../database/data_mac.js';
+//import { data_watch } from './database/data_watch.js';
+
+let dataAll = [...data_mac];
 let product = '';
 
 //tìm sản phẩm
 for (let item of dataAll) {
-  if (item.product == product1 && item.id == product2) {
+  let idProduct = item.id;
+  let modelProduct = item.model.split(' ')[0];
+  console.log(idProduct, modelProduct);
+  if (modelProduct == product1 && idProduct == product2) {
     product = item;
     console.log(item);
     break;
