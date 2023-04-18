@@ -47,18 +47,20 @@ const loadDataBagShop = (prData) => {
         let title = prData[i].model;
         let uppercaseTitle = title.toUpperCase();
         let idProduct = prData[i].id
+        let colorPr = prData[i].color;
+        let imgPr = prData[i].imgProduct;
 
         _render += `
         <tr>
             <td class="img-product">
                 <a href="">
-                    <img src="./img/iphone/iphone14/iphone_14_blue.png" alt="">
+                    <img src=".${imgPr}" alt="">
                 </a>
             </td>
             <td class="product">
                 <a class="title-product" href=""><b>${uppercaseTitle}</b></a>
                 <div class="sub-product">
-                    <p>Màu sắc: Space Green</p>
+                    <p>Màu sắc: ${colorPr}</p>
                 </div>
                 <div class="edit-item">
                     <a href="">

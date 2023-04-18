@@ -8,8 +8,8 @@ let products = JSON.parse(localStorage.getItem('products')) || [];;
 
 const renderDataToPage = (paramData, selRender) => {
     let _render = '';
-    for (let i = paramData.length -1 ; i > 0 ; i-=2) {
-        let imgProduct = paramData[i].imgProduct && paramData[i].imgProduct.length > 0 ? paramData[i].imgProduct[0] : '';
+    for (let i = paramData.length -1 ; i > 0 ; i--) {
+    
         let actualPrice = paramData[i].actualPrice;
         let oldPrice = paramData[i].oldPrice; 
     
@@ -20,37 +20,42 @@ const renderDataToPage = (paramData, selRender) => {
     
         let fmActualPrice = Number(actualPrice).toLocaleString();
         let fmOldlPrice = Number(oldPrice).toLocaleString();
+
+        for (let j = 0; j < paramData[i].color.length; j++) {
+            let imgProduct = paramData[i].imgProduct && paramData[i].imgProduct.length > 0 ? paramData[i].imgProduct[j] : '';
+            let colorTitl = paramData[i].color[j];
+            _render += `<div class="box-product">
+                        <div class="box-img">
+                            <a href="">
+                                <img src="..${imgProduct}" alt="">
+                            </a>
+                        </div>
+                        <div class="box-title">
+                            <a href="" title="${uppercaseTitle} ${colorTitl}">
+                            ${uppercaseTitle}
+                            </a>
+                        </div>
+                        <div class="box-price">
+                            <div class="price-actual">
+                                ${fmActualPrice}
+                            </div>
+                            <div class="price-old">
+                                ${fmOldlPrice}
+                            </div>
+                        </div>
+                        <div class="btn-add-cart">
+                            <a  class="box-add-cart" href="" data-product-id="${idProduct}" data-product-name="${title}" data-product-color="${colorTitl}">
+                                <div class="box-add-btn">
+                                    Add to cart
+                                </div>
+                                <div class="box-icon">
+                                    <i class="fa-solid fa-cart-arrow-down fa-xl"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div> `;
+        }
         
-        _render += `<div class="box-product">
-                    <div class="box-img">
-                        <a href="">
-                            <img src="..${imgProduct}" alt="">
-                        </a>
-                    </div>
-                    <div class="box-title">
-                        <a href="" title="${uppercaseTitle}">
-                        ${uppercaseTitle}
-                        </a>
-                    </div>
-                    <div class="box-price">
-                        <div class="price-actual">
-                            ${fmActualPrice}
-                        </div>
-                        <div class="price-old">
-                            ${fmOldlPrice}
-                        </div>
-                    </div>
-                    <div class="btn-add-cart">
-                        <a  class="box-add-cart" href="" data-product-id="${idProduct}" data-product-name="${title}">
-                            <div class="box-add-btn">
-                                Add to cart
-                            </div>
-                            <div class="box-icon">
-                                <i class="fa-solid fa-cart-arrow-down fa-xl"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div> `;
     }
     selRender.innerHTML = _render;
 }
@@ -77,6 +82,7 @@ const addToCart = (param) => {
     // Lấy thông tin sản phẩm từ thuộc tính data của thẻ click
     let productId = param.dataset.productId;
     let productName = param.dataset.productName.split(' ')[0];
+    let productColor = param.dataset.productColor;
     // kiểm trả điều kiện để chọn data
     let result = null;
     if (productName.toLowerCase() == 'iphone') {
@@ -100,13 +106,26 @@ const addToCart = (param) => {
     }
 
     if (result) {
+        for (let i = 0; i < result.color.length; i++) {
+            if (result.color[i].trim() !== productColor.trim()) {
+                result.color.splice(i, 1);
+                result.imgProduct.splice(i, 1);
+                i--;
+            }
+        }
+
+        // Nếu không còn phần tử nào trong mảng color thì đặt giá trị imgProduct là một mảng rỗng
+        if (result.color.length === 0) {
+            result.imgProduct = [];
+        }
+        
         products.push(result);
+        console.log(products)
     }
 
 
     // lưu giữ liệu vào localStorage dưới dạng JSON
     localStorage.setItem('products', JSON.stringify(products));
-    console.log(products)
 
     alert('Sản Phẩm Được Thêm Vào Giỏ Hàng')
 }
