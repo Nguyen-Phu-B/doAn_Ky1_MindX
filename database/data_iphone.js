@@ -8,7 +8,7 @@ export let data_iphone = [
         color: ['midnight', 'starlight', '(product) red'],
         imgProduct: [
             '/img/iphone/iphoneSE/iphone_se_2022_midnight.webp',
-            '/img/iphone/iphoneSE/iphone_se_2022_starlight.webp',
+            '/img/iphone/iphoneSE/iphone_se_2022_starlight.png',
             '/img/iphone/iphoneSE/iphone_se_2022_product_red.webp',
         ],
         oldPrice: 12990000,
@@ -23,7 +23,7 @@ export let data_iphone = [
         color: ['midnight', 'starlight', '(product) red'],
         imgProduct: [
             '/img/iphone/iphoneSE/iphone_se_2022_midnight.webp',
-            '/img/iphone/iphoneSE/iphone_se_2022_starlight.webp',
+            '/img/iphone/iphoneSE/iphone_se_2022_starlight.png',
             '/img/iphone/iphoneSE/iphone_se_2022_product_red.webp',
         ],
         oldPrice: 13990000,
@@ -38,7 +38,7 @@ export let data_iphone = [
         color: ['midnight', 'starlight', '(product) red'],
         imgProduct: [
             '/img/iphone/iphoneSE/iphone_se_2022_midnight.webp',
-            '/img/iphone/iphoneSE/iphone_se_2022_starlight.webp',
+            '/img/iphone/iphoneSE/iphone_se_2022_starlight.png',
             '/img/iphone/iphoneSE/iphone_se_2022_product_red.webp',
         ],
         oldPrice: 16990000,

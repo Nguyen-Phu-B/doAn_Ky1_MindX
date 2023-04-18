@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/contentAllPr.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="module" type="text/javascript" src="./script/loadProduct.js"></script>
+
+
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+            $('#slide').load('slider.html');
+            $('#footer').load('footer.html');
+        })
+    </script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- Slider -->
+    <div id="slide"></div>
+
+    <!-- allData -->
+    <div id="ttAll" class="box-header">
+
+    </div>
+    <div id="renderAll" class=" box-booth"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+
+</html>

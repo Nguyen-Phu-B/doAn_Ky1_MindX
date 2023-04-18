@@ -3,9 +3,17 @@ import { mac_data } from '../database/data_maca.js';
 
 // Đọc dữ liệu từ localStorage nếu có
 let products = JSON.parse(localStorage.getItem('products')) || [];;
+// Get URL
+let url = window.location.href
+// Tách phần query string của URL
+let queryString = url.split('?')[1];
+let queryStringSr;
+if (typeof queryString !== 'undefined') {
+  queryStringSr = queryString.split('_')[1];
+}
+console.log(queryString);
 
-// render iPhone
-
+// render Product
 const renderDataToPage = (paramData, selRender) => {
     let _render = '';
     for (let i = paramData.length -1 ; i > 0 ; i--) {
@@ -59,13 +67,92 @@ const renderDataToPage = (paramData, selRender) => {
     }
     selRender.innerHTML = _render;
 }
+// render Series
+const renderDataModel = (paramData, selRender, prModel) => {
+    let _render = '';
+    for (let i = paramData.length -1 ; i > 0 ; i--) {
+    
+        let actualPrice = paramData[i].actualPrice;
+        let oldPrice = paramData[i].oldPrice; 
+    
+        let idProduct = paramData[i].id;
+    
+        let title = paramData[i].model;
+        let uppercaseTitle = title.toUpperCase();
+    
+        let fmActualPrice = Number(actualPrice).toLocaleString();
+        let fmOldlPrice = Number(oldPrice).toLocaleString();
 
-let $selIphone = document.getElementById("renderIphones");
-let $selMac = document.getElementById("renderMacs");
-renderDataToPage(data_iphone, $selIphone);
-renderDataToPage(mac_data, $selMac);
+        for (let j = 0; j < paramData[i].color.length; j++) {
+            let imgProduct = paramData[i].imgProduct && paramData[i].imgProduct.length > 0 ? paramData[i].imgProduct[j] : '';
+            let colorTitl = paramData[i].color[j];
+            if (paramData[i].series == prModel) {
+                _render += `<div class="box-product">
+                            <div class="box-img">
+                                <a href="">
+                                    <img src="..${imgProduct}" alt="">
+                                </a>
+                            </div>
+                            <div class="box-title">
+                                <a href="" title="${uppercaseTitle} ${colorTitl}">
+                                ${uppercaseTitle}
+                                </a>
+                            </div>
+                            <div class="box-price">
+                                <div class="price-actual">
+                                    ${fmActualPrice}
+                                </div>
+                                <div class="price-old">
+                                    ${fmOldlPrice}
+                                </div>
+                            </div>
+                            <div class="btn-add-cart">
+                                <a  class="box-add-cart" href="" data-product-id="${idProduct}" data-product-name="${title}" data-product-color="${colorTitl}">
+                                    <div class="box-add-btn">
+                                        Add to cart
+                                    </div>
+                                    <div class="box-icon">
+                                        <i class="fa-solid fa-cart-arrow-down fa-xl"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div> `;
+            }
+        }
+        
+    }
+    selRender.innerHTML = _render;
+}
 
-//-------
+// Nếu query là iphone||macbook thì dùng trang allProduct
+if (queryString == 'iphone') {
+    let $selAll = document.getElementById("renderAll");
+    let $ttAll = document.getElementById('ttAll')
+    $ttAll.innerHTML = `<h2>${queryString.toUpperCase()}</h2>`
+    renderDataToPage(data_iphone, $selAll);
+}
+if (queryString == 'iphone_14' || queryString == 'iphone_13' || queryString == 'iphone_12' || queryString == 'iphone_11' || queryString == 'iphone_se') {
+    let $selAll = document.getElementById("renderAll");
+    let $ttAll = document.getElementById('ttAll')
+    $ttAll.innerHTML = `<h2>${queryString.toUpperCase()}</h2>`
+    renderDataModel(data_iphone, $selAll, queryStringSr);
+}
+if (queryString == 'macbook') {
+    let $selAll = document.getElementById("renderAll");
+    let $ttAll = document.getElementById('ttAll')
+    $ttAll.innerHTML = `<h2>${queryString.toUpperCase()}</h2>`
+    renderDataToPage(mac_data, $selAll);
+} 
+// Nếu query không tồn tại thì dùng index thường
+if (!queryString) {
+    let $selIphone = document.getElementById("renderIphones");
+    let $selMac = document.getElementById("renderMacs");
+    renderDataToPage(data_iphone, $selIphone);
+    renderDataToPage(mac_data, $selMac);
+}
+
+
+//xư lý sự kiện click add-cart lưu data vào localStorage
 let addCart = document.querySelectorAll('.box-add-cart');
 // gán sự kiện click cho 'add-cart' - thay đổi số trên bag
 addCart.forEach(function(addCart) {
