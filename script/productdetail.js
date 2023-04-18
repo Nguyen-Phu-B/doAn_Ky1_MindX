@@ -1,10 +1,10 @@
 //get parameter from url
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const product1 = urlParams.get('product');
-const product2 = Number(urlParams.get('id'));
+const nameProduct = urlParams.get('product');
+const idProduct = Number(urlParams.get('id'));
 
-console.log(product1, product2);
+console.log(nameProduct, idProduct);
 
 //import dữ liệu và xác định sản phẩm cần load lên page
 import { data_mac } from '../database/data_mac.js';
@@ -15,10 +15,9 @@ let product = '';
 
 //tìm sản phẩm
 for (let item of dataAll) {
-  let idProduct = item.id;
-  let modelProduct = item.model.split(' ')[0];
-  console.log(idProduct, modelProduct);
-  if (modelProduct == product1 && idProduct == product2) {
+  let product_id = item.id;
+  let product_name = item.model.split(' ')[0];
+  if (product_name == nameProduct && product_id == idProduct) {
     product = item;
     console.log(item);
     break;
@@ -27,13 +26,23 @@ for (let item of dataAll) {
 
 //nếu có sản phẩm, thực hiện load dữ liệu
 if (product != '') {
-  let $contentpage = document.querySelector('.product-details-page');
+  let $contentpage = document.querySelector('#content-product');
+
+  let imgProduct = product.color_img[0]['img'];
+
+  let title = product.model;
+  let uppercaseTitle = title.toUpperCase();
+
+  let fmActualPrice = Number(product.actualPrice).toLocaleString();
+  let fmOldlPrice = Number(product.oldPrice).toLocaleString();
+
   let renderText = `
+  <div class="product-details-page">
     <div class="page-body">
       <div class="gallery">
         <div class="picture">
           <img
-            src="${product.color_img[0]['img']}"
+            src="${imgProduct}"
             alt=""
           />
         </div>
@@ -41,14 +50,14 @@ if (product != '') {
       <div class="overview">
         <div class="wrapper-info">
           <div class="product-name">
-          ${product.model}
+          ${uppercaseTitle}
           </div>
-          <div class="star-review"></div>
+          <div class="prices">
+          <div class="price-actual">${fmActualPrice}</div>
+          <div class="price-old">${fmOldlPrice}</div>
         </div>
-        <div class="prices">
-          <div class="price-actual">${product.actualPrice}</div>
-          <div class="price-old">${product.oldPrice}</div>
         </div>
+        
         <div class="attributes">
           <div class="product-attribute">
             <div class="product-attribute-label">Màu sắc</div>
@@ -87,6 +96,7 @@ if (product != '') {
           </div>
         </div>
       </div>
+    </div>
     </div>`;
 
   $contentpage.innerHTML = renderText;
@@ -138,7 +148,7 @@ if (product != '') {
 
   //Đổi hình theo màu
   let $img = document.querySelector(
-    '#content-mac .product-details-page .picture img'
+    '#content-product .product-details-page .picture img'
   );
 
   let $colorCheck = document.querySelectorAll('.product-attribute-input input');

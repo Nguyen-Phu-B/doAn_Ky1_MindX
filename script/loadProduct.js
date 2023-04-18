@@ -1,5 +1,5 @@
 import { data_iphone } from '../database/data_iphone.js';
-import { mac_data } from '../database/data_maca.js';
+import { data_mac } from '../database/data_mac.js';
 
 // Đọc dữ liệu từ localStorage nếu có
 let products = JSON.parse(localStorage.getItem('products')) || [];
@@ -58,10 +58,90 @@ const renderDataToPage = (paramData, selRender) => {
   selRender.innerHTML = _render;
 };
 
+// render MAC
+const renderDataToPage_other = (paramData, selRender) => {
+  let _render = '';
+  for (let i = paramData.length - 1; i > 0; i -= 1) {
+    let imgProduct =
+      paramData[i].color_img && paramData[i].color_img.length > 0
+        ? paramData[i].color_img[0]['img']
+        : '';
+    let actualPrice = paramData[i].actualPrice;
+    let oldPrice = paramData[i].oldPrice;
+
+    let idProduct = paramData[i].id;
+    let nameProduct = paramData[i].model.split(' ')[0];
+
+    let title = paramData[i].model;
+    let uppercaseTitle = title.toUpperCase();
+
+    let fmActualPrice = Number(actualPrice).toLocaleString();
+    let fmOldlPrice = Number(oldPrice).toLocaleString();
+
+    _render += `<div class="box-product" >
+                    <div class="box-img" data-product_id="${idProduct}" data-product_name="${nameProduct}">
+                        <a href="./productdetail.html">
+                            <img src="..${imgProduct}" alt="">
+                        </a>
+                    </div>
+                    <div class="box-title">
+                        <a href="./productdetail.html" title="${uppercaseTitle}">
+                        ${uppercaseTitle}
+                        </a>
+                    </div>
+                    <div class="box-price">
+                        <div class="price-actual">
+                            ${fmActualPrice}
+                        </div>
+                        <div class="price-old">
+                            ${fmOldlPrice}
+                        </div>
+                    </div>
+                    <div class="btn-add-cart">
+                        <a  class="box-add-cart" href="" data-product-id="${idProduct}" data-product-name="${title}">
+                            <div class="box-add-btn">
+                                Add to cart
+                            </div>
+                            <div class="box-icon">
+                                <i class="fa-solid fa-cart-arrow-down fa-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div> `;
+  }
+  selRender.innerHTML = _render;
+
+  //Add tham số khi click chi tiết sản phẩm
+  let $link = document.querySelectorAll(`#content .box-img a`);
+  for (let $item of $link) {
+    $item.addEventListener('click', function (event) {
+      //event.preventDefault();
+      let dataproduct = $item.parentElement;
+      let url = new URL($item.href);
+      url.searchParams.append('product', dataproduct.dataset.product_name);
+      url.searchParams.append('id', dataproduct.dataset.product_id);
+      $item.href = url;
+      console.log($item.href);
+    });
+  }
+  $link = document.querySelectorAll(`#content .box-title a`);
+  for (let $item of $link) {
+    $item.addEventListener('click', function (event) {
+      //event.preventDefault();
+      let dataproduct = $item.parentElement;
+      let url = new URL($item.href);
+      url.searchParams.append('product', dataproduct.dataset.product_name);
+      url.searchParams.append('id', dataproduct.dataset.product_id);
+      $item.href = url;
+      console.log($item.href);
+    });
+  }
+};
+
 let $selIphone = document.getElementById('renderIphones');
 let $selMac = document.getElementById('renderMacs');
 renderDataToPage(data_iphone, $selIphone);
-renderDataToPage(mac_data, $selMac);
+renderDataToPage_other(data_mac, $selMac);
 
 //-------
 let addCart = document.querySelectorAll('.box-add-cart');
@@ -81,8 +161,9 @@ const addToCart = (param) => {
   let productName = param.dataset.productName;
 
   // Lấy thông tin sản phẩm từ thuộc tính data của thẻ click
-  let productId = param.dataset.productId;
-  let productName = param.dataset.productName.split(' ')[0];
+  productId = param.dataset.productId;
+  productName = param.dataset.productName.split(' ')[0];
+
   // kiểm trả điều kiện để chọn data
   let result = null;
   if (productName.toLowerCase() == 'iphone') {
