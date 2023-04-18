@@ -134,7 +134,7 @@ if (queryString == 'iphone') {
 if (queryString == 'iphone_14' || queryString == 'iphone_13' || queryString == 'iphone_12' || queryString == 'iphone_11' || queryString == 'iphone_se') {
     let $selAll = document.getElementById("renderAll");
     let $ttAll = document.getElementById('ttAll')
-    $ttAll.innerHTML = `<h2>${queryString.toUpperCase()}</h2>`
+    $ttAll.innerHTML = `<h2>${queryString.toUpperCase().replace('_', ' ')}</h2>`
     renderDataModel(data_iphone, $selAll, queryStringSr);
 }
 if (queryString == 'macbook') {
@@ -143,6 +143,13 @@ if (queryString == 'macbook') {
     $ttAll.innerHTML = `<h2>${queryString.toUpperCase()}</h2>`
     renderDataToPage(mac_data, $selAll);
 } 
+if (queryString == 'macbook_pro' || queryString == 'macbook_air`') {
+    let $selAll = document.getElementById("renderAll");
+    let $ttAll = document.getElementById('ttAll')
+    $ttAll.innerHTML = `<h2>${queryString.toUpperCase().replace('_', ' ')}</h2>`
+    let valQuery = queryString.replace('_', ' ');
+    renderDataModel(mac_data, $selAll, valQuery);
+}
 // Nếu query không tồn tại thì dùng index thường
 if (!queryString) {
     let $selIphone = document.getElementById("renderIphones");
