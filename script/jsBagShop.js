@@ -44,8 +44,7 @@ const loadDataBagShop = (prData) => {
         }, 0); 
 
         let priceProduct = Number(prData[i].actualPrice).toLocaleString();
-        let title = prData[i].model;
-        let uppercaseTitle = title.toUpperCase();
+        let title = prData[i].model.toUpperCase();
         let idProduct = prData[i].id
         let colorPr = prData[i].color;
         let imgPr = prData[i].imgProduct;
@@ -58,7 +57,7 @@ const loadDataBagShop = (prData) => {
                 </a>
             </td>
             <td class="product">
-                <a class="title-product" href=""><b>${uppercaseTitle}</b></a>
+                <a class="title-product" href=""><b>${title}</b></a>
                 <div class="sub-product">
                     <p>Màu sắc: ${colorPr}</p>
                 </div>
