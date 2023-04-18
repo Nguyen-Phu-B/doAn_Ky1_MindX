@@ -143,7 +143,7 @@ if (queryString == 'macbook') {
     $ttAll.innerHTML = `<h2>${queryString.toUpperCase()}</h2>`
     renderDataToPage(mac_data, $selAll);
 } 
-if (queryString == 'macbook_pro' || queryString == 'macbook_air`') {
+if (queryString == 'macbook_pro' || queryString == 'macbook_air') {
     let $selAll = document.getElementById("renderAll");
     let $ttAll = document.getElementById('ttAll')
     $ttAll.innerHTML = `<h2>${queryString.toUpperCase().replace('_', ' ')}</h2>`
