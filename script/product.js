@@ -4,54 +4,74 @@ const urlParams = new URLSearchParams(queryString);
 const product = urlParams.get('product');
 
 //import du lieu
-import { mac_data } from './data_mac.js';
-import { watch_data } from './data_watch.js';
+import { data_iphone } from '../database/data_iphone.js';
+import { data_mac } from '../database/data_mac.js';
+import { data_watch } from '../database/data_watch.js';
 
 let data;
-
-if (product == 'mac') {
-  data = mac_data;
-} else if (product == 'watch') {
-  data = watch_data;
+let titleHeader;
+if (product == 'macbook') {
+  data = data_mac;
+  titleHeader = 'MACBOOK';
+} else if (product == 'iphone') {
+  data = data_iphone;
+  titleHeader = 'IPHONE';
+} else if (product == 'apple') {
+  data = data_watch;
+  titleHeader = 'WATCH';
 }
+
+console.log(data);
 
 let renderText = '';
 
-//load du lieu container mac
-let $container = document.querySelector('#content-mac');
-renderText = `<div class="container">
-<div class="row" id="itemMac">
+//load du lieu container
+let $container = document.querySelector('#content-product');
+renderText = `<div class="titleHeader">${titleHeader}</div>
+<div class="container">
+<div class="row" id="item-product">
 </div>
 </div>`;
 $container.innerHTML = renderText;
 
 //load toan du san pham Mac
-let $itemMac = document.querySelector('#itemMac');
+let $itemMac = document.querySelector('#item-product');
+let paramData = data;
 renderText = '';
-for (let i = 0; i < data.length; i++) {
-  let image = data[i].color_img[0]['img'];
-  let oldPrice = data[i].oldPrice;
-  let actualPrice = data[i].actualPrice;
-  let title = data[i].model;
-  let dataProduct = data[i].product;
-  let dataId = data[i].id;
-  console.log(dataProduct, dataId);
+for (let i = 0; i < paramData.length; i++) {
+  let imgProduct =
+    paramData[i].color_img && paramData[i].color_img.length > 0
+      ? paramData[i].color_img[0]['img']
+      : '';
+  let actualPrice = paramData[i].actualPrice;
+  let oldPrice = paramData[i].oldPrice;
+  let fmActualPrice = Number(actualPrice).toLocaleString();
+  let fmOldlPrice = Number(oldPrice).toLocaleString();
+
+  let title = paramData[i].model;
+  let uppercaseTitle = title.toUpperCase();
+
+  let idProduct = paramData[i].id;
+  let nameProduct = paramData[i].model.split(' ')[0];
+
   renderText += `<div class="col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <div class="box-item">
-      <div class="box-product" data-p1="${dataProduct}" data-p2="${dataId}">
-        <div class="box-img">
-          <a href="./producpage.html">
+      <div class="box-product" >
+        <div class="box-img" data-product_id="${idProduct}" data-product_name="${nameProduct}">
+          <a href="./productdetail.html">
             <img
-              src="${image}"
+              src="${imgProduct}"
               alt=""
             />
           </a>
         </div>
         <div class="box-detail">
-          <div class="box-title">${title}</div>
+          <div class="box-title">
+          ${uppercaseTitle}
+          </div>
           <div class="box-price">
-            <div class="price-actual">${actualPrice}</div>
-            <div class="price-old">${oldPrice}</div>
+            <div class="price-actual">${fmActualPrice}</div>
+            <div class="price-old">${fmOldlPrice}</div>
           </div>
         </div>
       </div>
@@ -61,25 +81,16 @@ for (let i = 0; i < data.length; i++) {
 
 $itemMac.innerHTML = renderText;
 
-//Add them số khi click link
-let $link = document.querySelectorAll('#itemMac .box-product a');
-
-// console.log($link);
-
+//Add tham số khi click chi tiết sản phẩm
+let $link = document.querySelectorAll(`#content .box-img a`);
 for (let $item of $link) {
   $item.addEventListener('click', function (event) {
     //event.preventDefault();
-    console.log($item.parentElement.parentElement);
-    let dataproduct = $item.parentElement.parentElement;
-
-    // console.log(dataproduct.dataset.p1);
-    // console.log(dataproduct.dataset.p2);
-
+    let dataproduct = $item.parentElement;
     let url = new URL($item.href);
-    url.searchParams.append('product', dataproduct.dataset.p1);
-    url.searchParams.append('id', dataproduct.dataset.p2);
+    url.searchParams.append('product', dataproduct.dataset.product_name);
+    url.searchParams.append('id', dataproduct.dataset.product_id);
     $item.href = url;
-
-    // console.log($item.href);
+    //console.log($item.href);
   });
 }

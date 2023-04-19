@@ -12,15 +12,15 @@ export let data_watch = [
     color_img: [
       {
         color: 'silver',
-        img: './img/watch/watch_series8_thep_gps_cellular_silver.png',
+        img: '/img/watch/watch_series8_thep_gps_cellular_silver.png',
       },
       {
         color: 'gold',
-        img: './img/watch/watch_series8_thep_gps_cellular_gold.png',
+        img: '/img/watch/watch_series8_thep_gps_cellular_gold.png',
       },
       {
         color: 'graphite',
-        img: './img/watch/watch_series8_thep_gps_cellular_graphite.png',
+        img: '/img/watch/watch_series8_thep_gps_cellular_graphite.png',
       },
     ],
   },
@@ -37,19 +37,19 @@ export let data_watch = [
     color_img: [
       {
         color: 'midnight',
-        img: './img/watch/watch_series8_nhom_gps_cellular_midnight.png',
+        img: '/img/watch/watch_series8_nhom_gps_cellular_midnight.png',
       },
       {
         color: 'starlight',
-        img: './img/watch/watch_series8_nhom_gps_cellular_starlight.png',
+        img: '/img/watch/watch_series8_nhom_gps_cellular_starlight.png',
       },
       {
         color: 'silver',
-        img: './img/watch/watch_series8_nhom_gps_cellular_silver.png',
+        img: '/img/watch/watch_series8_nhom_gps_cellular_silver.png',
       },
       {
         color: 'red',
-        img: './img/watch/watch_series8_nhom_gps_cellular_red.png',
+        img: '/img/watch/watch_series8_nhom_gps_cellular_red.png',
       },
     ],
   },
@@ -66,19 +66,19 @@ export let data_watch = [
     color_img: [
       {
         color: 'midnight',
-        img: './img/watch/watch_series8_nhom_gps_midnight.png',
+        img: '/img/watch/watch_series8_nhom_gps_midnight.png',
       },
       {
         color: 'starlight',
-        img: './img/watch/watch_series8_nhom_gps_starlight.png',
+        img: '/img/watch/watch_series8_nhom_gps_starlight.png',
       },
       {
         color: 'silver',
-        img: './img/watch/watch_series8_nhom_gps_silver.png',
+        img: '/img/watch/watch_series8_nhom_gps_silver.png',
       },
       {
         color: 'red',
-        img: './img/watch/watch_series8_nhom_gps_red.png',
+        img: '/img/watch/watch_series8_nhom_gps_red.png',
       },
     ],
   },
@@ -96,7 +96,25 @@ export let data_watch = [
     color_img: [
       {
         color: 'silver',
-        img: './img/watch/watch_series7_thep_gps_cellular_silver.png',
+        img: '/img/watch/watch_series7_thep_gps_cellular_silver.png',
+      },
+    ],
+  },
+  //series 6
+  {
+    product: 'watch',
+    id: 5,
+    brand: 'apple',
+    series: 'Series 6',
+    type: 'Nhôm GPS',
+    display: 41,
+    model: 'Apple Watch Series 6 Nhôm GPS',
+    oldPrice: 11990000,
+    actualPrice: 9290000,
+    color_img: [
+      {
+        color: 'red',
+        img: '/img/watch/watch_series6_nhomcellular_red.png',
       },
     ],
   },

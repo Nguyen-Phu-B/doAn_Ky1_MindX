@@ -1,5 +1,6 @@
 import { data_iphone } from '../database/data_iphone.js';
 import { data_mac } from '../database/data_mac.js';
+import { data_watch } from '../database/data_watch.js';
 
 // Đọc dữ liệu từ localStorage nếu có
 let products = JSON.parse(localStorage.getItem('products')) || [];
@@ -58,7 +59,7 @@ const renderDataToPage = (paramData, selRender) => {
   selRender.innerHTML = _render;
 };
 
-// render MAC
+// render MAC, Watch
 const renderDataToPage_other = (paramData, selRender) => {
   let _render = '';
   for (let i = paramData.length - 1; i > 0; i -= 1) {
@@ -85,9 +86,9 @@ const renderDataToPage_other = (paramData, selRender) => {
                         </a>
                     </div>
                     <div class="box-title">
-                        <a href="./productdetail.html" title="${uppercaseTitle}">
+                        
                         ${uppercaseTitle}
-                        </a>
+                        
                     </div>
                     <div class="box-price">
                         <div class="price-actual">
@@ -124,24 +125,29 @@ const renderDataToPage_other = (paramData, selRender) => {
       console.log($item.href);
     });
   }
-  $link = document.querySelectorAll(`#content .box-title a`);
-  for (let $item of $link) {
+
+  //Add tham số khi user xem tất cả sản phầm của một loại (như mac, watch)
+  let $linkTitle = document.querySelectorAll(`#content .box-header a`);
+  //console.log($linkTitle);
+  for (let $item of $linkTitle) {
     $item.addEventListener('click', function (event) {
       //event.preventDefault();
+      console.log($item);
       let dataproduct = $item.parentElement;
       let url = new URL($item.href);
       url.searchParams.append('product', dataproduct.dataset.product_name);
-      url.searchParams.append('id', dataproduct.dataset.product_id);
+      //console.log(url);
       $item.href = url;
-      console.log($item.href);
     });
   }
 };
 
 let $selIphone = document.getElementById('renderIphones');
 let $selMac = document.getElementById('renderMacs');
+let $selWatch = document.getElementById('renderWatchs');
 renderDataToPage(data_iphone, $selIphone);
 renderDataToPage_other(data_mac, $selMac);
+renderDataToPage_other(data_watch, $selWatch);
 
 //-------
 let addCart = document.querySelectorAll('.box-add-cart');

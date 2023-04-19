@@ -8,9 +8,9 @@ console.log(nameProduct, idProduct);
 
 //import dữ liệu và xác định sản phẩm cần load lên page
 import { data_mac } from '../database/data_mac.js';
-//import { data_watch } from './database/data_watch.js';
+import { data_watch } from '../database/data_watch.js';
 
-let dataAll = [...data_mac];
+let dataAll = [...data_mac, ...data_watch];
 let product = '';
 
 //tìm sản phẩm

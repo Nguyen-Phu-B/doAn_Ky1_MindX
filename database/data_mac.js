@@ -8,8 +8,8 @@ export let data_mac = [
     type: 'M1',
     display: 13,
     model: 'MacBook Air M1 2020 (8GB RAM | 256GB SSD)',
-    oldPrice: [28990000],
-    actualPrice: [18790000],
+    oldPrice: 28990000,
+    actualPrice: 18790000,
     color_img: [
       {
         color: 'space gray',
@@ -34,8 +34,8 @@ export let data_mac = [
     display: 13,
     model: 'MacBook Air M2 2022 (8GB RAM | 256GB SSD)',
     color: ['space gray', 'silver', 'starlight', 'midnight'],
-    oldPrice: [32990000],
-    actualPrice: [27090000],
+    oldPrice: 32990000,
+    actualPrice: 27090000,
     color_img: [
       {
         color: 'space gray',
@@ -63,8 +63,8 @@ export let data_mac = [
     type: 'M2',
     display: 13,
     model: 'MacBook Air M2 2022 (8GB RAM | 512GB SSD)',
-    oldPrice: [39990000],
-    actualPrice: [32990000],
+    oldPrice: 39990000,
+    actualPrice: 32990000,
     color_img: [
       {
         color: 'space gray',
@@ -92,8 +92,8 @@ export let data_mac = [
     type: 'M2',
     display: 13,
     model: 'MacBook Air M2 2022 (16GB RAM | 256GB SSD)',
-    oldPrice: [39990000],
-    actualPrice: [32990000],
+    oldPrice: 39990000,
+    actualPrice: 32990000,
     color_img: [
       {
         color: 'space gray',
@@ -121,8 +121,8 @@ export let data_mac = [
     type: 'M2',
     display: 13,
     model: 'MacBook Air M2 2022 (16GB RAM | 512GB SSD)',
-    oldPrice: [44990000],
-    actualPrice: [38990000],
+    oldPrice: 44990000,
+    actualPrice: 38990000,
     color_img: [
       {
         color: 'space gray',
@@ -151,8 +151,8 @@ export let data_mac = [
     type: 'M1',
     display: 13,
     model: 'MacBook Pro M1 2020 (8 core GPU| 8GB RAM| 256GB SSD)',
-    oldPrice: [34990000],
-    actualPrice: [27950000],
+    oldPrice: 34990000,
+    actualPrice: 27950000,
     color_img: [
       {
         color: 'silver',
@@ -168,8 +168,8 @@ export let data_mac = [
     type: 'M1 Pro',
     display: 14,
     model: 'MacBook Pro 14 M1 Pro (16 Core/16GB/1TB)',
-    oldPrice: [68000000],
-    actualPrice: [49790000],
+    oldPrice: 68000000,
+    actualPrice: 49790000,
 
     color_img: [
       {
@@ -182,35 +182,47 @@ export let data_mac = [
       },
     ],
   },
-  // {
-  //   product: 'mac',
-  //   id: 8,
-  //   brand: 'apple',
-  //   series: 'macbook pro',
-  //   type: 'M1 Max',
-  //   display: 14,
-  //   model: 'MacBook Pro 14 M1 Max (32 Core GPU| 1TB SSD)',
-  //   color: ['silver'],
-  //   oldPrice: [90500000],
-  //   actualPrice: [78990000],
-  //   img: ['./img/mac/macbookpro/macbookpro_m1max_silver.webp'],
-  // },
-  // {
-  //   product: 'mac',
-  //   id: 9,
-  //   brand: 'apple',
-  //   series: 'macbook pro',
-  //   type: 'M2',
-  //   display: 13,
-  //   model: 'MacBook Pro 13 inch M2 (10 core| 8GB RAM| 256GB SSD)',
-  //   color: ['space gray', 'silver'],
-  //   oldPrice: [35990000],
-  //   actualPrice: [29990000],
-  //   img: [
-  //     './img/mac/macbookpro/macbookpro_m2_spacegray.webp',
-  //     './img/mac/macbookpro/macbookpro_m2_silver.webp',
-  //   ],
-  // },
+  {
+    product: 'mac',
+    id: 8,
+    brand: 'apple',
+    series: 'macbook pro',
+    type: 'M1 Max',
+    display: 14,
+    model: 'MacBook Pro 14 M1 Max (32 Core GPU| 1TB SSD)',
+    color: ['silver'],
+    oldPrice: 90500000,
+    actualPrice: 78990000,
+    color_img: [
+      {
+        color: 'silver',
+        img: '/img/mac/macbookpro/macbookpro_m1max_silver.webp',
+      },
+    ],
+  },
+  {
+    product: 'mac',
+    id: 9,
+    brand: 'apple',
+    series: 'macbook pro',
+    type: 'M2',
+    display: 13,
+    model: 'MacBook Pro 13 inch M2 (10 core| 8GB RAM| 256GB SSD)',
+    color: ['space gray', 'silver'],
+    oldPrice: 35990000,
+    actualPrice: 29990000,
+
+    color_img: [
+      {
+        color: 'spacegray',
+        img: '/img/mac/macbookpro/macbookpro_m2_spacegray.webp',
+      },
+      {
+        color: 'silver',
+        img: '/img/mac/macbookpro/macbookpro_m2_silver.webp',
+      },
+    ],
+  },
   // {
   //   product: 'mac',
   //   id: 10,

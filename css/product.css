@@ -1,24 +1,32 @@
-#content-mac {
+#content-product {
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 80px;
 }
 
-#content-mac .box-item {
+.titleHeader {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#content-product .box-item {
   padding: 20px;
 }
-#content-mac .box-product {
+#content-product .box-product {
   /* padding: 15px; */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   /* margin-bottom: 15px; */
+  min-width: 190px;
 }
 
-#content-mac .box-img img {
+#content-product .box-img img {
   width: 100%;
 }
 
 /* trường hợp title quá dài thì để các dấu chấm phía sau */
-#content-mac .box-title {
+#content-product .box-title {
   font-weight: bold;
   max-height: 50px;
   overflow: hidden;
@@ -27,23 +35,23 @@
   -webkit-box-orient: vertical;
 }
 
-#content-mac .box-price {
+#content-product .box-price {
   display: flex;
   /* justify-content: space-around; */
 }
 
-#content-mac .price-actual {
+#content-product .price-actual {
   color: blue;
   font-weight: bold;
 }
 
-#content-mac .price-old {
+#content-product .price-old {
   color: #666;
   opacity: 0.8;
   text-decoration: line-through;
   margin-left: 10px;
 }
 
-#content-mac .box-detail {
+#content-product .box-detail {
   padding: 10px;
 }
