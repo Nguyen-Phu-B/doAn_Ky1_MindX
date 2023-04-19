@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/register.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Wapper- form đăng ký Bootstrap  -->
+    <div id="wrapper-form" style="background-image: url('https://i.pinimg.com/564x/02/54/34/02543494585229ca29447336691171fc.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-center mb-4">Đăng Nhập</h2>
+                                <form action="">
+                                    <div class="needs-validated">
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="userName">Tên đăng nhập:</label>
+                                            <input type="text" class="form-control" placeholder="Nhập tên đăng nhập" />
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Hãy nhập tài khoản</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="needs-validated">
+                                        <div class="form-outline mb-2">
+                                            <label class="form-label" for="pwd">Mật khẩu:</label>
+                                            <input type="password" class="form-control" id="pwd"
+                                                placeholder="Nhập mật khẩu" name="pswd" required />
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Hãy nhập mật khẩu</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input me-2" type="checkbox" value="password"
+                                            id="box-login" checked />
+                                        <label class="form-check-label" for="box-login">Nhớ Mật Khẩu</label>
+                                    </div>
+
+                                    <span class="forget-password">
+                                        <a href="#">Quên mật khẩu?</a>
+                                    </span>
+
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <button type="submit" id="btn_login" onclick="btnLoginClick()"
+                                            class="btn btn-success btn-outline-secondary btn-block btn-lg gradient-custom-4 text-body">Đăng
+                                            Nhập</button>
+                                    </div>
+
+                                    <p class="text-center text-muted mt-3 mb-2">Bạn chưa có tài khoản? <a
+                                            href="./register.html" class="fw-bold text-body"><u>Đăng ký tại đây!</u></a>
+                                    </p>
+
+                                    <div class="text-center">
+                                        <p>Hoặc đăng nhập với:</p>
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-google"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-link btn-floating mx-1">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const btnLoginClick = () => {
+        window.location.href = 'index.html'
+    }
+</script>
+
+</html>
