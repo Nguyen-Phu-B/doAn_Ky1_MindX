@@ -68,7 +68,7 @@ if (product != '') {
           </div>
         </div>
         <div class="add-cart">
-          <div class="add-to-cart-panel">MUA NGAY</div>
+          <a href="" class="add-to-cart-panel">MUA NGAY</a>
         </div>
         <div class="product-policy">
           <div class="prd-policy">
