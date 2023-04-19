@@ -11,6 +11,12 @@
     margin-bottom: 22px;
 }
 
+.box-header a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
 .box-booth {
     display: flex;
     flex-wrap: wrap;
