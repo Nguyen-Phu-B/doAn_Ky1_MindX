@@ -3,6 +3,7 @@ import { mac_data } from '../database/data_maca.js';
 
 // Đọc dữ liệu từ localStorage nếu có
 let products = JSON.parse(localStorage.getItem('products')) || [];;
+
 // Get URL
 let url = window.location.href
 // Tách phần query string của URL
@@ -11,7 +12,6 @@ let queryStringSr;
 if (typeof queryString !== 'undefined') {
   queryStringSr = queryString.split('_')[1];
 }
-console.log(queryString);
 
 // render Product
 const renderDataToPage = (paramData, selRender) => {
@@ -25,6 +25,8 @@ const renderDataToPage = (paramData, selRender) => {
     
         let title = paramData[i].model;
         let uppercaseTitle = title.toUpperCase();
+
+        let nameProduct = paramData[i].model.split(' ')[0];
     
         let fmActualPrice = Number(actualPrice).toLocaleString();
         let fmOldlPrice = Number(oldPrice).toLocaleString();
@@ -33,8 +35,8 @@ const renderDataToPage = (paramData, selRender) => {
             let imgProduct = paramData[i].imgProduct && paramData[i].imgProduct.length > 0 ? paramData[i].imgProduct[j] : '';
             let colorTitl = paramData[i].color[j];
             _render += `<div class="box-product">
-                        <div class="box-img">
-                            <a href="">
+                        <div class="box-img" data-product_id="${idProduct}" data-product_name="${nameProduct}">
+                            <a href="./productdetail.html" >
                                 <img src="..${imgProduct}" alt="">
                             </a>
                         </div>
@@ -79,6 +81,8 @@ const renderDataModel = (paramData, selRender, prModel) => {
     
         let title = paramData[i].model;
         let uppercaseTitle = title.toUpperCase();
+
+        let nameProduct = paramData[i].model.split(' ')[0];
     
         let fmActualPrice = Number(actualPrice).toLocaleString();
         let fmOldlPrice = Number(oldPrice).toLocaleString();
@@ -88,8 +92,8 @@ const renderDataModel = (paramData, selRender, prModel) => {
             let colorTitl = paramData[i].color[j];
             if (paramData[i].series == prModel) {
                 _render += `<div class="box-product">
-                            <div class="box-img">
-                                <a href="">
+                            <div class="box-img"  data-product_id="${idProduct}" data-product_name="${nameProduct}">
+                                <a href="./productdetail.html">
                                     <img src="..${imgProduct}" alt="">
                                 </a>
                             </div>
@@ -150,7 +154,7 @@ if (queryString == 'macbook_pro' || queryString == 'macbook_air') {
     let valQuery = queryString.replace('_', ' ');
     renderDataModel(mac_data, $selAll, valQuery);
 }
-// Nếu query không tồn tại thì dùng index thường
+// Nếu query không tồn tại thì dùng index
 if (!queryString) {
     let $selIphone = document.getElementById("renderIphones");
     let $selMac = document.getElementById("renderMacs");
@@ -158,8 +162,36 @@ if (!queryString) {
     renderDataToPage(mac_data, $selMac);
 }
 
+// Add tham số khi click chi tiết sản phẩm
+let $link = document.querySelectorAll(` .box-img a`);
+for (let $item of $link) {
+  $item.addEventListener('click', function (event) {
+    // event.preventDefault();
+      console.log($link);
+      let dataproduct = $item.parentElement;
+      console.log(dataproduct);
+    let url = new URL($item.href);
+    url.searchParams.append('product', dataproduct.dataset.product_name);
+    url.searchParams.append('id', dataproduct.dataset.product_id);
+    $item.href = url;
+    console.log($item.href);
+  });
+}
 
-//xư lý sự kiện click add-cart lưu data vào localStorage
+// change sl bag
+const changeItemCount = () => {
+    // Lấy giá trị của cookie 'productCount'
+    const productCount = products.length;
+
+    // Cập nhật nội dung của phần tử có id 'cal_items' với giá trị từ cookie
+    if (!productCount) {
+        return;
+    } else {
+        document.getElementById('cal_items').innerHTML = productCount;
+    }
+}
+
+// xư lý sự kiện click add-cart lưu data vào localStorage
 let addCart = document.querySelectorAll('.box-add-cart');
 // gán sự kiện click cho 'add-cart' - thay đổi số trên bag
 addCart.forEach(function(addCart) {
@@ -170,6 +202,47 @@ addCart.forEach(function(addCart) {
     });
 });
 
+// validate choose Data
+const chooseData = (prNamePr, prIdPr, prColorPr) => {
+    let resChoose;
+    if (prNamePr.toLowerCase() == 'iphone') {
+        let j = 0;
+        while (j < data_iphone.length) {
+            if (data_iphone[j].id === Number(prIdPr)) {
+                resChoose = data_iphone[j];
+                break;
+            }
+            j++;
+        }
+    }
+    if (prNamePr.toLowerCase() == 'macbook') {
+        let j = 0;
+        while (j < mac_data.length) {
+            if (mac_data[j].id === Number(prIdPr)) {
+                resChoose = mac_data[j];
+                break;
+            }
+            j++;
+        }
+    }
+
+
+    let resChooseSub = Object.assign({}, resChoose);
+    let tempColor = [];
+    let tempImgProduct = [];
+    for (let i = 0; i < resChoose.color.length; i++) {
+        if (resChoose.color[i].trim() === prColorPr.trim()) {
+            tempColor.push(resChoose.color[i]);
+            tempImgProduct.push(resChoose.imgProduct[i]);
+        } 
+    }
+    
+    resChooseSub.color = tempColor;
+    resChooseSub.imgProduct = tempImgProduct;
+
+    return resChooseSub;
+}
+
 // click lưu thông tin sản phẩm vào localStorage và số lượng sản phẩm cào cookie
 const addToCart = (param) => {
 
@@ -178,65 +251,17 @@ const addToCart = (param) => {
     let productName = param.dataset.productName.split(' ')[0];
     let productColor = param.dataset.productColor;
     // kiểm trả điều kiện để chọn data
-    let result = null;
-    if (productName.toLowerCase() == 'iphone') {
-        let j = 0;
-        while (j < data_iphone.length) {
-            if (data_iphone[j].id == productId) {
-                result = data_iphone[j];
-                break;
-            }
-            j++;
-        }
-    } else if (productName.toLowerCase() == 'macbook') {
-        let j = 0;
-        while (j < mac_data.length) {
-            if (mac_data[j].id == productId) {
-                result = mac_data[j];
-                break;
-            }
-            j++;
-        }
-    }
+    let result;
 
-    if (result) {
-        for (let i = 0; i < result.color.length; i++) {
-            if (result.color[i].trim() !== productColor.trim()) {
-                result.color.splice(i, 1);
-                result.imgProduct.splice(i, 1);
-                i--;
-            }
-        }
+    result = chooseData(productName, productId, productColor);
 
-        // Nếu không còn phần tử nào trong mảng color thì đặt giá trị imgProduct là một mảng rỗng
-        if (result.color.length === 0) {
-            result.imgProduct = [];
-        }
-        
-        products.push(result);
-        console.log(products)
-    }
+    products.push(result);
 
-
+    result = null;
     // lưu giữ liệu vào localStorage dưới dạng JSON
     localStorage.setItem('products', JSON.stringify(products));
 
     alert('Sản Phẩm Được Thêm Vào Giỏ Hàng')
 }
 
-// change sl bag
-const changeItemCount = () => {
-    // Lấy giá trị của cookie 'productCount'
-    const productCount = products.length;
-    console.log(productCount);
-
-    // Cập nhật nội dung của phần tử có id 'cal_items' với giá trị từ cookie
-    if (!productCount) {
-        return;
-    } else {
-        document.getElementById('cal_items').innerHTML = productCount;
-    }
-}
-
 changeItemCount();
-

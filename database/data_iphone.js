@@ -1,4 +1,4 @@
-export let data_iphone = [
+export const data_iphone = [
     {
         id: 1,
         brand: 'apple',

@@ -28,16 +28,26 @@ const loadDataBagShop = (prData) => {
 
     for (let i = 0; i < prData.length; i++) {
 
-        if (renderedIds.includes(prData[i].id)) {
-            continue; // Bỏ qua sản phẩm này nếu đã được render trước đó
+        let prRendered = {
+            id: 0,
+            color: '',
         }
 
+        prRendered.id = prData[i].id;
+        prRendered.color = prData[i].color[[0]];
+
+        // Bỏ qua sản phẩm này nếu đã được render trước đó
+        if (renderedIds.find(item => item.id === prData[i].id && item.color === prData[i].color[0])) {
+            continue; 
+        }
         // Đánh dấu id của sản phẩm đã được render
-        renderedIds.push(prData[i].id);
+        renderedIds.push(prRendered);
 
         // đếm các id trung nhau làm số lượng sản phẩm
         countPr = prData.reduce((acc, item) => {
-            if (item.id === prData[i].id) {
+            if (item.id === prData[i].id
+                &&
+                JSON.stringify(item.color) === JSON.stringify(prData[i].color)) {
                 acc++;
             }
             return acc;
@@ -72,12 +82,12 @@ const loadDataBagShop = (prData) => {
             </td>
             <td class="count-product">
                 <div class="inp-st">
-                    <input type="text" name="" id="" data-id="${idProduct}" value="${countPr}">
+                    <input type="text" name="" id="" data-id="${idProduct}" data-color="${colorPr}"  value="${countPr}">
                 </div>
             </td>
             <td class="edit-tbl">
                 <a href="">
-                    <i data-id="${idProduct}" class="fa-solid fa-trash-can fa-xl"></i>
+                    <i data-id="${idProduct}" data-color="${colorPr}" class="fa-solid fa-trash-can fa-xl"></i>
                 </a>
             </td>
         </tr>`
@@ -106,11 +116,10 @@ const updateTotal = () => {
 updateTotal();
 
 // kiểm tra và update 
-const updateDataToLocal = (prId, prQual) => {
+const updateDataToLocal = (prId,prColor, prQual) => {
     let count = 0;
-
     for (let i = 0; i < products.length; i++){
-        if (products[i].id === prId) {
+        if (products[i].id === prId && products[i].color[0] === prColor) {
             count++;
             if (count < prQual) {
                 products.push(products[i])
@@ -125,9 +134,10 @@ const updateDataToLocal = (prId, prQual) => {
 // lấy dữ liệu quali và id từ inp số lượng
 const changeDataLocal = (event) => {
     let idDta = parseInt(event.target.dataset.id);
+    let colorDta = event.target.dataset.color;
     let countInp = parseInt(event.target.value);
-    updateDataToLocal(idDta, countInp);
-    console.log('update', products)
+
+    updateDataToLocal(idDta, colorDta, countInp);
     // Lưu mảng products vào localStorage
     localStorage.setItem('products', JSON.stringify(products));
     updateTotal();
@@ -146,11 +156,11 @@ deleteProductIcons.forEach(icon => {
         const row = event.target.closest('tr');
         event.preventDefault();
         let idDta = parseInt(event.target.dataset.id);
+        let colorDta = event.target.dataset.color;
         let validate = confirm('Bạn có chắc chắn muốn xóa hàng sản phẩm này?');
         if (validate = true) {
             row.remove(); // Xóa hàng sản phẩm
-            updateDataToLocal(idDta, 0);
-            console.log('update', products)
+            updateDataToLocal(idDta, colorDta, 0);
             localStorage.setItem('products', JSON.stringify(products));
             updateTotal(); // Cập nhật tổng
         }
